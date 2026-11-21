@@ -1,1992 +1,789 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="he"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
-        window.__firebase_config = firebaseConfig;
-        window.__initial_auth_token = initialAuthToken;
-        window.__app_id = appId;
-            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMzI0NTgyNjY1NDc3MDY3OTAwMiIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiI0MTViNjU4ODEzNzUtaW5kZXguaHRtbC05NzIifSwiZXhwIjoxNzk1MjYyMTcyLCJpYXQiOjE3OTUyNTg1NzIsImFsZyI6IlJTMjU2In0.nWLZKcZSYwOPKtvxXdRclcv4HGfG4O2ZUxePHL4cJCIxk13aJkmVvderugRRlR19qU-lG2mtcsFtOjRBV05xdt9RCLU3RLY4i8QikFtOuvvizZd5SVbein_pWHs7PPiv9jPCmV0rZeUZ0yRwglj1jxTO7QbCQison2jl8-809t4a5Smv4J5t7Hc10PN_amlNCTMEag81GjL4TXBrH-MSpjCYJZz55UbdBFfjaUMxf0rSnPPqouOSSmCY9CC7xKj-b2B1BkXUK7wrbUaelQsAcBJwzIf00jmt3x6JWt8oY-rcKwUdVs3-vk5hCysGsypqcyhOo9M-zg8qLdW48SxoLw","415b65881375-index.html-972")</script><script data-bard-client-injected="true">
-  document.addEventListener('input', (event) => {
-    if (event.target && (event.target.isContentEditable || event.target.hasAttribute('contenteditable'))) {
-      const clonedDoc = document.cloneNode(true);
-      const injectedScripts = clonedDoc.querySelectorAll('[data-bard-client-injected="true"]');
-      injectedScripts.forEach(el => el.remove());
-      window.parent.postMessage({
-        type: 'inlineEdit',
-        html: '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML
-      }, '*');
-    }
-  });
-</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
-</script><script data-bard-client-injected="true">(function(){'use strict';var k=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function m(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var q=m(this);
-function r(a,b){if(b)a:{var d=q;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&k(d,a,{configurable:!0,writable:!0,value:b})}}function t(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function u(a){return t(a())}
-r("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});r("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
-
- MIT License
-
- Copyright (c) 2017-2023 W.Y.
-
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
-
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
-
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
-
-*/
-function v(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var aa=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let y=null;function z(a={}){return y?y:a.u?y=a.u:y=w(window.getComputedStyle(document.documentElement))}function A(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
-function B(a,b={}){var d;if(!(d=b.width)){d=A(a,"border-left-width");var c=A(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=A(a,"border-top-width"),c=A(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function C(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
-function ba(a){return u(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
-function ca(a,b,d){return u(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return ba(c)})}
-var D=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||D(a,b)};function da(a,b){return z(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
-function E(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=aa();try{b.className=`${b.className} ${f}`}catch(h){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=da(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function F(a){return a.search(/^(data:)/)!==-1}function G(a,b,d){return u(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var h=new FileReader;h.onerror=g;h.onloadend=()=>{try{f(d({v:c,result:h.result}))}catch(l){g(l)}};h.readAsDataURL(e)})})}const H={};function ea(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
-function I(a,b,d){return u(function*(){var c=ea(a,b,d.F);if(H[c]!=null)return H[c];d.B&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield G(a,d.l,({v:g,result:h})=>{b||(b=g.headers.get("Content-Type")||"");return h.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.o||""}return H[c]=e})};const J={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",C:"application/vnd.ms-fontobject",J:"image/png",H:"image/jpeg",G:"image/jpeg",D:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function K(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function fa(a){return u(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):C(b)})}function ha(a,b){return u(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return C(d)}d=a.poster;d=yield I(d,J[K(d).toLowerCase()]||"",b);return C(d)})}
-function ia(a,b){return u(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield L(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ja(a,b){return u(function*(){return D(a,HTMLCanvasElement)?fa(a):D(a,HTMLVideoElement)?ha(a,b):D(a,HTMLIFrameElement)?ia(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
-function ka(a,b,d){return u(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(D(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||D(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>L(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
-return b})}function la(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):z(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);D(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
-function ma(a,b){D(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
-function na(a,b){return u(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield L(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
-c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
-function L(a,b,d){return u(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ja(c,b)).then(c=>ka(a,c,b)).then(c=>{D(c,Element)&&(la(a,c,b),E(a,c,":before",b),E(a,c,":after",b),D(a,HTMLTextAreaElement)&&(c.textContent=a.value),D(a,HTMLInputElement)&&c.setAttribute("value",a.value),ma(a,c));return c}).then(c=>na(c,b)):null})};const M=/url\((['"]?)([^'"]+?)\1\)/g,oa=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,pa=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function qa(a){var b=[];a.replace(M,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!F(d))}
-function ra(a,b,d,c){return u(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield I(e,J[K(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function sa(a,{K:b}){return b?a.replace(pa,d=>{for(;;){let [c,,e]=oa.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
-function N(a,b,d){return u(function*(){if(a.search(M)===-1)return a;var c=sa(a,d);return qa(c).reduce((e,f)=>e.then(g=>ra(g,f,b,d)),Promise.resolve(c))})};function O(a,b,d){return u(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield N(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function ta(a,b){return u(function*(){(yield O("background",a,b))||(yield O("background-image",a,b));(yield O("mask",a,b))||(yield O("-webkit-mask",a,b))||(yield O("mask-image",a,b))||(yield O("-webkit-mask-image",a,b))})}
-function ua(a,b){return u(function*(){var d=D(a,HTMLImageElement);if(d&&!F(a.src)||D(a,SVGImageElement)&&!F(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield I(c,J[K(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.h?(...h)=>{try{f(b.h(...h))}catch(l){g(l)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
-function va(a,b){return u(function*(){var d=w(a.childNodes).map(c=>P(c,b));yield Promise.all(d).then(()=>a)})}function P(a,b){return u(function*(){D(a,Element)&&(yield ta(a,b),yield ua(a,b),yield va(a,b))})};const Q={};function R(a){return u(function*(){var b=Q[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return Q[a]=b})}function S(a,b){return u(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>u(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return G(g,b.l,({result:h})=>{d=d.replace(f,`url(${h})`);return[f,h]})}));return Promise.all(e).then(()=>d)})}
-function T(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
-d.lastIndex;b.push(e[0])}return b}
-function wa(a,b){return u(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let h=g+1;f=R(f.href).then(l=>S(l,b)).then(l=>T(l).forEach(p=>{try{e.insertRule(p,p.startsWith("@import")?h+=1:e.cssRules.length)}catch(x){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(h=>h.href==null)||document.styleSheets[0];e.href!=null&&c.push(R(e.href).then(h=>S(h,b)).then(h=>T(h).forEach(l=>{g.insertRule(l,g.cssRules.length)})).catch(()=>
-{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function xa(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(M)!==-1)}function ya(a,b){return u(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=yield wa(w(a.ownerDocument.styleSheets),b);return xa(d)})}
-function za(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function Aa(a,b){return u(function*(){var d=yield ya(a,b),c=za(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>N(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
-function Ba(a,b){return u(function*(){var d=b.m!=null?b.m:b.A?null:yield Aa(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function Ca(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield L(a,b,!0);yield Ba(e,b);yield P(e,b);v(e,b);return yield ca(e,d,c)})}
-function Da(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield Ca(a,b);e=yield C(e);var f=document.createElement("canvas"),g=f.getContext("2d"),h=b.I||window.devicePixelRatio||1,l=b.j||d,p=b.i||c;f.width=l*h;f.height=p*h;!b.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
-f.style.width=`${l}`;f.style.height=`${p}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Ea(a,b={}){return u(function*(){return(yield Da(a,b)).toDataURL()})};const Fa=["gemini.google.com","corp.google.com","proxy.googlers.com"];function V(a){a=Number(a.replace(/px$/,""));return Number.isFinite(a)?a:0}function W(){return document.body.querySelectorAll('[class*="animate"]').length>0}function X(a,b){var d=document.createElement("canvas");d.width=a;d.height=b;return d.toDataURL("image/png")}const Y=X(1,1);
-function Z(a,b){return u(function*(){var d=Math.max(b?b.width:a.offsetWidth,1),c=Math.max(b?b.height:a.offsetHeight,1),e=HTMLCanvasElement.prototype.toDataURL;b&&(HTMLCanvasElement.prototype.toDataURL=function(f,g){var h;if(h=this.isConnected&&a.contains(this)){{let n=this.getBoundingClientRect();if(n.width===0||n.height===0)h=!1;else if(window.getComputedStyle(this).position==="fixed")h=n.bottom>0&&n.top<b.height&&n.right>0&&n.left<b.width;else{h=a.getBoundingClientRect();var l=n.top-h.top,p=n.left-
-h.left,x=n.right-h.left;h=n.bottom-h.top>b.scrollTop&&l<b.scrollTop+b.height&&x>b.scrollLeft&&p<b.scrollLeft+b.width}}h=!h}return h?"data:,":e.call(this,f,g)});try{let f=window.getComputedStyle(a),g=b?`${V(f.marginTop)-b.scrollTop}px`:void 0,h=b?`${V(f.marginLeft)-b.scrollLeft}px`:void 0,l=`${Math.max(a.offsetWidth,d)}px`,p,x=`${Math.max(a.offsetHeight,c+((p=b==null?void 0:b.scrollTop)!=null?p:0))}px`;return yield Ea(a,Object.assign({},{width:d,height:c,j:d,i:c},b?{style:{width:l,height:x,marginTop:g,
-marginLeft:h,marginBlockStart:g,marginInlineStart:h}}:{},{A:!0,filter:n=>{if(n.tagName==="IMG"){let U=n.getAttribute("src");if(!U||U.trim()===""||n.style.display==="none")return!1}return!0},o:Y,h:()=>Y}))}catch(f){return X(d,c)}finally{HTMLCanvasElement.prototype.toDataURL=e}})}
-function Ga(){return u(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
-function Ha(a){return u(function*(){var b={width:window.innerWidth||document.documentElement.clientWidth||document.body.offsetWidth,height:window.innerHeight||document.documentElement.clientHeight||document.body.offsetHeight,scrollTop:window.scrollY||document.documentElement.scrollTop||document.body.scrollTop||0,scrollLeft:window.scrollX||document.documentElement.scrollLeft||document.body.scrollLeft||0},d=document.body;if(W()){let c=yield Ga();d=c;document.body.appendChild(c)}b=yield Z(d,b);W()&&
-document.body.removeChild(d);window.parent.postMessage({type:"SEND_SCREENSHOT",image:b,topOffset:0},a.origin)})}function Ia(a){return u(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}window.addEventListener("message",a=>u(function*(){if(Fa.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ha(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ia(a)))}}));
-})();</script><script data-bard-client-injected="true">(function() {
-  // Ensure this script is executed only once
-  if (window.firebaseAuthBridgeScriptLoaded) {
-    return;
-  }
-  window.firebaseAuthBridgeScriptLoaded = true;
-
-  let nextTokenPromiseId = 0;
-
-  // Stores { resolve, reject } for ongoing token requests
-  const pendingTokenPromises = {};
-
-  // Listen for messages from the Host Application
-  window.addEventListener('message', function(event) {
-
-    const messageData = event.data;
-
-  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
-      const { success, token, error, promiseId } = messageData ?? {};
-      if (pendingTokenPromises[promiseId]) {
-        if (success) {
-          pendingTokenPromises[promiseId].resolve(token);
-        } else {
-          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
-        }
-        delete pendingTokenPromises[promiseId];
-      }
-    }
-  });
-
-  // Expose a function for the Generated App to request a new Firebase token
-  window.requestNewFirebaseToken = function() {
-    const currentPromiseId = nextTokenPromiseId++;
-    const promise = new Promise((resolve, reject) => {
-      pendingTokenPromises[currentPromiseId] = { resolve, reject };
-    });
-    if (window.parent && window.parent !== window) {
-      window.parent.postMessage({
-        type: 'REQUEST_NEW_FIREBASE_TOKEN',
-        promiseId: currentPromiseId
-      }, '*');
-    } else {
-      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
-      delete pendingTokenPromises[currentPromiseId];
-    }
-    return promise;
-  };
-})();</script><script data-bard-client-injected="true">
-let realOriginalGetUserMedia = null;
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
-}
-
-(function() {
-  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
-    try {
-      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
-        get: function() {
-          return undefined; // Or throw an error
-        },
-        configurable: false
-      });
-    } catch (error) {
-      console.error("Error defining prototype getter:", error);
-    }
-  }
-})();
-
-(function() {
-  const pendingMediaResolvers = {};
-  let nextMediaPromiseId = 0;
-
-  function requestMediaPermissions(constraints) {
-    const mediaPromiseId = nextMediaPromiseId++;
-    const promise = new Promise((resolve, reject) => {
-      pendingMediaResolvers[mediaPromiseId] = (granted) => {
-        delete pendingMediaResolvers[mediaPromiseId];
-        resolve(granted);
-      };
-    });
-
-    window.parent.postMessage({
-      type: 'requestMediaPermission',
-      constraints: constraints,
-      promiseId: mediaPromiseId,
-    }, '*');
-
-    return promise;
-  }
-
-  let originalGetUserMedia = realOriginalGetUserMedia;
-
-  function interceptGetUserMedia() {
-    if (navigator.mediaDevices) {
-      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
-        value: function(constraints) {
-          return requestMediaPermissions(constraints).then((granted) => {
-            if (granted) {
-              if (originalGetUserMedia) {
-                return originalGetUserMedia(constraints);
-              } else {
-                throw new Error("Original getUserMedia not available.");
-              }
-            } else {
-              throw new DOMException('Permission denied', 'NotAllowedError');
-            }
-          });
-        },
-        writable: false,
-        configurable: false
-      });
-    }
-  }
-
-  interceptGetUserMedia();
-
-  const observer = new MutationObserver(function(mutationsList, observer) {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
-        interceptGetUserMedia();
-      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
-        interceptGetUserMedia();
-      } else if (mutation.type === 'childList' && mutation.addedNodes) {
-        mutation.addedNodes.forEach(node => {
-          if (node === navigator.mediaDevices) {
-            interceptGetUserMedia();
-          }
-        });
-      }
-    }
-  });
-
-  function interceptSpeechRecognition() {
-    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
-      return;
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>הכנה למבחן בכימיה - כיתה ט' (לפי סיכומי המחברת)</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --ink: #172554;
+      --muted: #475569;
+      --primary: #1d4ed8;
+      --primary-soft: #dbeafe;
+      --accent: #0f766e;
+      --accent-soft: #ccfbf1;
+      --warn: #b45309;
+      --warn-soft: #fef3c7;
+      --ok: #15803d;
+      --ok-soft: #dcfce7;
+      --bad: #b91c1c;
+      --bad-soft: #fee2e2;
+      --border: #cbd5e1;
     }
 
-    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    * { box-sizing: border-box; }
 
-    const SpeechRecognitionWrapper = function(...args) {
-      const recognizer = new OriginalSpeechRecognition(...args);
-      const originalStart = recognizer.start.bind(recognizer);
-
-      recognizer.start = function() {
-        requestMediaPermissions({ audio: true }).then(granted => {
-          if (granted) {
-            originalStart();
-          } else {
-            const errorEvent = new SpeechRecognitionErrorEvent('error');
-            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
-            recognizer.dispatchEvent(errorEvent);
-          }
-        });
-      };
-
-      return recognizer;
-    };
-
-    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
-    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
-
-    if (window.SpeechRecognition) {
-      window.SpeechRecognition = SpeechRecognitionWrapper;
-    }
-    if (window.webkitSpeechRecognition) {
-      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
-    }
-  }
-
-  interceptSpeechRecognition();
-
-  window.addEventListener('message', function(event) {
-    if (event.data) {
-      if (event.data.type === 'resolveMediaPermission') {
-        const { promiseId, granted } = event.data;
-        if (pendingMediaResolvers[promiseId]) {
-          pendingMediaResolvers[promiseId](granted);
-        }
-      }
-    }
-  });
-
-})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
-function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
-
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
-*/
-function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
-let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
-null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.extensions="";var l=0,t=null,r=null,q=[],F=new TextEncoder,
-G=new TextDecoder;c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*
-16|0;return(f==="x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;
-(g=t)==null||g.postMessage(a)}};Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
-(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
-url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
-</script><script data-bard-client-injected="true">((function(modelInformation) {
-  const originalFetch = window.fetch;
-  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
-  let googleLlmBaseApiUrls = [
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
-  ];
-  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-    );
-  });
-  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-
-  const pendingFetchResolvers = {};
-  let nextPromiseId = 0;
-
-  function handleStringInput(input, optionsArgument) {
-    const actualUrl = input;
-    const fetchCallArgs = [actualUrl, optionsArgument];
-    const effectiveOptions = optionsArgument || {};
-    const bodyForApiKeyCheck = effectiveOptions.body;
-    const bodyForPostMessage = effectiveOptions.body;
-    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
-  }
-
-  function handleRequestInput(input, optionsArgument) {
-    const actualUrl = input.url;
-    const fetchCallArgs = [input, optionsArgument];
-    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
-    let bodyForApiKeyCheck;
-    let bodyForPostMessage;
-
-    if (optionsArgument) {
-      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
-      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
-      if ('body' in optionsArgument) {
-        bodyForApiKeyCheck = optionsArgument.body;
-        bodyForPostMessage = optionsArgument.body;
-      } else {
-        bodyForApiKeyCheck = undefined;
-        bodyForPostMessage = input.body;
-      }
-    } else {
-      bodyForApiKeyCheck = undefined;
-      bodyForPostMessage = input.body;
-    }
-    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
-  }
-
-  window.fetch = function(input, optionsArgument) {
-    let actualUrl;
-    let fetchCallArgs;
-    let effectiveOptions = {};
-    let bodyForApiKeyCheck;
-    let bodyForPostMessage;
-
-    if (typeof input === 'string') {
-      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
-    } else if (input instanceof Request) {
-      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
-    } else {
-      return originalFetch.apply(window, [input, optionsArgument]);
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
     }
 
-    effectiveOptions.method = effectiveOptions.method || 'GET';
-    if (!effectiveOptions.headers) {
-      effectiveOptions.headers = new Headers();
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #0f766e);
+      color: #fff;
+      padding: 20px 16px;
+      text-align: center;
     }
 
-
-    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
-      let apiKeyIsNull = true;
-
-      const regex = new RegExp("models/([^:]+)");
-      const modelNameMatch = actualUrl.match(regex);
-      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
-
-
-      try {
-        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
-        const apiKeyParam = urlObject.searchParams.get('key');
-        if (apiKeyParam) {
-          apiKeyIsNull = false;
-        }
-      } catch (e) {
-        // Continue checks even if URL parsing fails
-      }
-
-      if (apiKeyIsNull && effectiveOptions.headers) {
-        const h = new Headers(effectiveOptions.headers);
-        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
-        if (apiKeyHeaderValue) {
-          apiKeyIsNull = false;
-          return originalFetch.apply(window, fetchCallArgs);
-        }
-      }
-
-      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
-        try {
-          const bodyData = JSON.parse(bodyForApiKeyCheck);
-          if (bodyData && bodyData.apiKey) {
-            apiKeyIsNull = false;
-            return originalFetch.apply(window, fetchCallArgs);
-          }
-        } catch (e) {
-          // Ignore JSON parsing errors
-        }
-      }
-
-      if(apiKeyIsNull) {
-        const promiseId = nextPromiseId++;
-        const promise = new Promise((resolve) => {
-          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
-            delete pendingFetchResolvers[promiseId];
-            resolve(resolvedResponse);
-          };
-        });
-
-        let serializedBodyForPostMessage;
-        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
-            serializedBodyForPostMessage = bodyForPostMessage;
-        } else if (bodyForPostMessage instanceof ReadableStream) {
-            serializedBodyForPostMessage = null;
-        } else {
-            try {
-                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
-            } catch (e) {
-                serializedBodyForPostMessage = null;
-            }
-        }
-
-        const messageOptions = {
-            method: effectiveOptions.method,
-            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
-            body: serializedBodyForPostMessage
-        };
-
-        window.parent.postMessage({
-          type: 'requestFetch',
-          url: actualUrl,
-          modelName: modelName,
-          options: messageOptions,
-          promiseId: promiseId,
-        }, '*');
-
-        return promise;
-      }
-      return originalFetch.apply(window, fetchCallArgs);
-    }
-    return originalFetch.apply(window, fetchCallArgs);
-  };
-
-  window.addEventListener('message', function(event) {
-    if (event.data && event.data.type === 'resolveFetch') {
-      const { promiseId, response } = event.data;
-      if (pendingFetchResolvers[promiseId]) {
-        try {
-          const reconstructedResponse = new Response(response.body, {
-            status: response.status,
-            statusText: response.statusText,
-            headers: new Headers(response.headers),
-          });
-          pendingFetchResolvers[promiseId](reconstructedResponse);
-        } catch (error) {
-          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
-        }
-      }
-    }
-  });
-
-}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function() {
-  const OVERLAY_SELECTOR =
-    'dialog[open], [role="dialog"], [role="alertdialog"], [role="menu"], [role="listbox"], [role="combobox"]';
-
-  function isVisibleOverlay(element) {
-    if (element.closest('[hidden], [aria-hidden="true"], [inert]')) {
-      return false;
-    }
-    if (window.getComputedStyle(element).visibility === 'hidden') {
-      return false;
-    }
-    for (let cur = element; cur; cur = cur.parentElement) {
-      if (window.getComputedStyle(cur).display === 'none') {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function hasOpenOverlay() {
-    const candidates = document.querySelectorAll(OVERLAY_SELECTOR);
-    for (let i = 0; i < candidates.length; i++) {
-      if (isVisibleOverlay(candidates[i])) {
-        return true;
-      }
-    }
-    try {
-      if (document.querySelector('[popover]:popover-open')) {
-        return true;
-      }
-    } catch (e) {
-      // Ignore engines that do not support :popover-open.
-    }
-    return false;
-  }
-
-  function isNonEmptySearchInput(target) {
-    return (
-      Boolean(target) &&
-      target.tagName === 'INPUT' &&
-      typeof target.type === 'string' &&
-      target.type.toLowerCase() === 'search' &&
-      typeof target.value === 'string' &&
-      target.value.length > 0
-    );
-  }
-
-  function shouldIgnoreEscape(event) {
-    return (
-      event.key !== 'Escape' ||
-      event.altKey ||
-      event.ctrlKey ||
-      event.metaKey ||
-      event.shiftKey ||
-      event.isComposing ||
-      event.repeat ||
-      event.keyCode === 229 ||
-      isNonEmptySearchInput(event.target)
-    );
-  }
-
-  let shouldIgnoreCaptureState = false;
-
-  window.addEventListener(
-    'keydown',
-    function(event) {
-      if (event.key === 'Escape') {
-        shouldIgnoreCaptureState =
-          hasOpenOverlay() || isNonEmptySearchInput(event.target);
-      }
-    },
-    {capture: true},
-  );
-
-  window.addEventListener('keydown', function(event) {
-    if (
-      shouldIgnoreEscape(event) ||
-      event.defaultPrevented ||
-      shouldIgnoreCaptureState
-    ) {
-      return;
-    }
-    const wasBlockedOnCapture = shouldIgnoreCaptureState;
-    queueMicrotask(function() {
-      if (event.defaultPrevented || wasBlockedOnCapture) {
-        return;
-      }
-      if (window.parent && window.parent !== window) {
-        window.parent.postMessage({'type': 'escapeKey'}, '*');
-      }
-    });
-  });
-})();</script><script data-bard-client-injected="true">(function() {
-  function normalizeSlug(str) {
-    try {
-      return str
-        .trim()
-        .toLowerCase()
-        .replace(/[^p{L}p{N}s_-]/gu, '')
-        .replace(/s+/g, '-');
-    } catch (e) {
-      return str
-        .trim()
-        .toLowerCase()
-        .replace(/[^a-z0-9s_-]/g, '')
-        .replace(/s+/g, '-');
-    }
-  }
-
-  function findTargetElement(hash) {
-    if (!hash || hash === '#') {
-      return null;
-    }
-    const rawId = hash.startsWith('#') ? hash.slice(1) : hash;
-    let decodedId = rawId;
-    try {
-      decodedId = decodeURIComponent(rawId);
-    } catch (e) {
-      // Ignore URI malformed errors.
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 1.6rem;
     }
 
-    // 1. Direct ID match (raw and decoded).
-    let target = document.getElementById(rawId) || document.getElementById(decodedId);
-    if (target) {
-      return target;
+    header p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 0.98rem;
     }
 
-    // 2. Name attribute match (<a name="...">).
-    try {
-      if (typeof CSS !== 'undefined' && CSS.escape) {
-        target =
-          document.querySelector('[name="' + CSS.escape(rawId) + '"]') ||
-          document.querySelector('[name="' + CSS.escape(decodedId) + '"]');
-      } else {
-        const namedElements = document.getElementsByName(rawId);
-        if (namedElements && namedElements.length > 0) {
-          return namedElements[0];
-        }
-      }
-    } catch (e) {
-      // Ignore querySelector syntax errors.
-    }
-    if (target) {
-      return target;
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 16px;
     }
 
-    // 3. Match heading text by slug (for Markdown TOCs where headings lack explicit IDs).
-    const targetSlug = normalizeSlug(decodedId);
-    if (targetSlug) {
-      for (const heading of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
-        if (normalizeSlug(heading.textContent || '') === targetSlug) {
-          return heading;
-        }
-      }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
     }
 
-    return null;
-  }
-
-  document.addEventListener('click', function(event) {
-    const target = event.target;
-    const anchor = target && typeof target.closest === 'function' ? target.closest('a') : null;
-    if (!anchor) {
-      return;
+    .tab-btn {
+      flex: 1 1 200px;
+      padding: 12px 14px;
+      border: 2px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.15s;
     }
 
-    const href = anchor.getAttribute('href');
-    if (
-      !href ||
-      href.trim().toLowerCase().startsWith('javascript:') ||
-      anchor.hasAttribute('download')
-    ) {
-      return;
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
     }
 
-    // Check if the link is an in-page hash / anchor link.
-    if (href.startsWith('#')) {
-      event.preventDefault();
-      const targetElement = findTargetElement(href);
-      if (targetElement) {
-        targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }
-      return;
+    .panel {
+      display: none;
     }
 
-    // Check if the URL has the same origin/pathname but with a hash.
-    try {
-      const url = new URL(anchor.href, window.location.href);
-      if (
-        url.hash &&
-        url.origin === window.location.origin &&
-        url.pathname === window.location.pathname
-      ) {
-        event.preventDefault();
-        const targetElement = findTargetElement(url.hash);
-        if (targetElement) {
-          targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-        }
-        return;
-      }
-    } catch (e) {
-      // Fall through if URL parsing fails.
+    .panel.active {
+      display: block;
     }
 
-    // For all external or full navigation links, prevent iframe-level navigation
-    // (which breaks in AGSA WebView or sandboxed iframes) and ensure they open
-    // safely in a new tab/window.
-    if (anchor.target !== '_blank') {
-      event.preventDefault();
-      window.open(anchor.href, '_blank', 'noopener,noreferrer');
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
     }
-  }, {capture: true});
-})();</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
-</script><script data-bard-client-injected="true">(function() {
-  const originalConsoleLog = console.log;
-  const originalConsoleError = console.error;
 
-    /**
-   * Normalizes an error event or a promise rejection reason into a structured error object.
-   * @param {*} errorEventOrReason The error object or reason.
-   * @return {object} Structured error data { message, name, stack }.
-   */
-  function getErrorObject(errorEventOrReason) {
-    if (errorEventOrReason instanceof Error) {
-      return {
-        message: errorEventOrReason.message,
-        name: errorEventOrReason.name,
-        stack: errorEventOrReason.stack,
-      };
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: var(--primary);
     }
-    // Fallback for non-Error objects.
-    try {
-      return {
-        message: JSON.stringify(errorEventOrReason),
-        name: 'UnknownErrorType',
-        stack: null,
-      };
-    } catch (e) {
-      return {
-        message: String(errorEventOrReason),
-        name: 'UnknownErrorTypeNonStringifiable',
-        stack: null,
-      };
+
+    h3 {
+      margin: 14px 0 8px;
+      font-size: 1.05rem;
+      color: var(--accent);
     }
-  }
 
-  /**
-   * Converts an array of arguments (from log/error) into a single string.
-   * Handles Error objects specially to include their message and stack.
-   * @param {Array<*>} args - Arguments passed to console methods.
-   * @return {string} A string representation of the arguments.
-   */
-  function stringifyArgs(args) {
-    return args
-      .map((arg) => {
-        if (arg instanceof Error) {
-          const {message, stack} = arg;
-          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
-        }
-        if (typeof arg === 'object' && arg !== null) {
-          try {
-            return JSON.stringify(arg);
-          } catch (error) {
-            return '[Circular Object]';
-          }
-        } else {
-          return String(arg);
-        }
-      })
-      .join(' ');
-  }
-
-  console.log = function(...args) {
-    const logString = stringifyArgs(args);
-    window.parent.postMessage({ type: 'log', message: logString }, '*');
-    originalConsoleLog.apply(console, args);
-  };
-
-  console.error = function(...args) {
-    let errorData;
-    if (args.length > 0 && args[0] instanceof Error) {
-      const err = args[0];
-      // If the first arg is an Error, capture its details.
-      errorData = {
-        type: 'error',
-        source: 'CONSOLE_ERROR',
-        ...getErrorObject(err),
-        rawArgsString: stringifyArgs(args.slice(1)),
-        timestamp: new Date().toISOString(),
-      };
-    } else {
-      // If not an Error object, treat all args as a general error message.
-      errorData = {
-        type: 'error',
-        source: 'CONSOLE_ERROR',
-        message: stringifyArgs(args),
-        name: 'ConsoleLoggedError',
-        stack: null,
-        timestamp: new Date().toISOString(),
-      };
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
     }
-    window.parent.postMessage(errorData, '*');
-    originalConsoleError.apply(console, args);
-  };
 
-  // Listen for global unhandled synchronous errors.
-  window.addEventListener('error', function(event) {
-    const errorDetails = event.error ? getErrorObject(event.error) : {
-      message: event.message,
-      name: 'GlobalError',
-      stack: null,
-      filename: event.filename,
-      lineno: event.lineno,
-      colno: event.colno,
-    };
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
 
-    window.parent.postMessage({
-      type: 'error',
-      source: 'global',
-      ...errorDetails,
-      message: errorDetails.message || event.message,
-      timestamp: new Date().toISOString(),
-    }, '*');
-  });
+    .pill {
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
 
-  // Listen for unhandled promise rejections (asynchronous errors).
-  window.addEventListener('unhandledrejection', function(event) {
-    const errorDetails = getErrorObject(event.reason);
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.92rem;
+    }
 
-    window.parent.postMessage({
-      type: 'error',
-      source: 'unhandledrejection',
-      ...errorDetails,
-      message: errorDetails.message || 'Unhandled Promise Rejection',
-      timestamp: new Date().toISOString(),
-    }, '*');
-  });
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: center;
+    }
 
-})();</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הכנה למבחן בכימיה - כיתה ט' | יסודות, תרכובות ומבנה האטום</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Assistant & Heebo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&amp;family=Heebo:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Assistant', 'Heebo', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-        }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .atom-pulse {
-            animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse-ring {
-            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
-            50% { transform: scale(1.03) rotate(180deg); opacity: 1; }
-        }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #0d9488;
-        }
-    </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.bottom-6{bottom:1.5rem}.right-6{right:1.5rem}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mb-3{margin-bottom:0.75rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-16{height:4rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-8{height:2rem}.h-auto{height:auto}.h-full{height:100%}.h-24{height:6rem}.min-h-screen{min-height:100vh}.w-0{width:0px}.w-12{width:3rem}.w-16{width:4rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-8{width:2rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.flex-grow{flex-grow:1}.translate-y-20{--tw-translate-y:5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-amber-500\/40{border-color:rgb(245 158 11 / 0.4)}.border-amber-800{--tw-border-opacity:1;border-color:rgb(146 64 14 / var(--tw-border-opacity, 1))}.border-cyan-800{--tw-border-opacity:1;border-color:rgb(21 94 117 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-slate-700\/80{border-color:rgb(51 65 85 / 0.8)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-teal-500\/20{border-color:rgb(20 184 166 / 0.2)}.border-teal-500\/30{border-color:rgb(20 184 166 / 0.3)}.border-teal-500\/40{border-color:rgb(20 184 166 / 0.4)}.border-teal-800{--tw-border-opacity:1;border-color:rgb(17 94 89 / var(--tw-border-opacity, 1))}.border-slate-700\/50{border-color:rgb(51 65 85 / 0.5)}.border-slate-700\/70{border-color:rgb(51 65 85 / 0.7)}.border-teal-400{--tw-border-opacity:1;border-color:rgb(45 212 191 / var(--tw-border-opacity, 1))}.border-teal-800\/60{border-color:rgb(17 94 89 / 0.6)}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-amber-500\/20{background-color:rgb(245 158 11 / 0.2)}.bg-amber-950{--tw-bg-opacity:1;background-color:rgb(69 26 3 / var(--tw-bg-opacity, 1))}.bg-cyan-400{--tw-bg-opacity:1;background-color:rgb(34 211 238 / var(--tw-bg-opacity, 1))}.bg-cyan-950{--tw-bg-opacity:1;background-color:rgb(8 51 68 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-teal-400{--tw-bg-opacity:1;background-color:rgb(45 212 191 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-teal-500\/10{background-color:rgb(20 184 166 / 0.1)}.bg-teal-500\/20{background-color:rgb(20 184 166 / 0.2)}.bg-teal-950{--tw-bg-opacity:1;background-color:rgb(4 47 46 / var(--tw-bg-opacity, 1))}.bg-slate-800\/60{background-color:rgb(30 41 59 / 0.6)}.bg-teal-950\/40{background-color:rgb(4 47 46 / 0.4)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-slate-800{--tw-gradient-from:#1e293b var(--tw-gradient-from-position);--tw-gradient-to:rgb(30 41 59 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-teal-500{--tw-gradient-from:#14b8a6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(20 184 166 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-teal-950{--tw-gradient-to:rgb(4 47 46 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #042f2e var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-cyan-400{--tw-gradient-to:#22d3ee var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-teal-950{--tw-gradient-to:#042f2e var(--tw-gradient-to-position)}.p-1\.5{padding:0.375rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-2{padding:0.5rem}.p-3\.5{padding:0.875rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.pb-4{padding-bottom:1rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-teal-300{--tw-text-opacity:1;color:rgb(94 234 212 / var(--tw-text-opacity, 1))}.text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-teal-200{--tw-text-opacity:1;color:rgb(153 246 228 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.selection\:bg-teal-500 *::selection{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-teal-500::selection{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-teal-500\/50:hover{border-color:rgb(20 184 166 / 0.5)}.hover\:border-slate-500:hover{--tw-border-opacity:1;border-color:rgb(100 116 139 / var(--tw-border-opacity, 1))}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.hover\:bg-amber-500\/10:hover{background-color:rgb(245 158 11 / 0.1)}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700\/50:hover{background-color:rgb(51 65 85 / 0.5)}.hover\:bg-teal-400:hover{--tw-bg-opacity:1;background-color:rgb(45 212 191 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-8{padding:2rem}.sm\:p-3{padding:0.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:w-64{width:16rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-8{grid-template-columns:repeat(8, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}@media (min-width: 1024px){.lg\:col-span-1{grid-column:span 1 / span 1}.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-teal-500 selection:text-white">
+    th {
+      background: #e2e8f0;
+      color: var(--ink);
+    }
 
-    <!-- Header Section -->
-    <header class="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 border-b border-teal-500/20 sticky top-0 z-40 shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="flex items-center gap-3 text-right">
-                    <div class="p-3 bg-teal-500/10 border border-teal-500/30 rounded-2xl text-teal-400">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <span class="bg-teal-500/20 text-teal-300 text-xs px-2.5 py-0.5 rounded-full font-bold border border-teal-500/30">כיתה ט'</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs px-2.5 py-0.5 rounded-full border border-slate-700">ערכת מדעים</span>
-                        </div>
-                        <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">הכנה למבחן בכימיה</h1>
-                    </div>
-                </div>
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
 
-                <!-- Navigation Tabs -->
-                <nav class="flex flex-wrap gap-2 justify-center bg-slate-800/80 p-1.5 rounded-2xl border border-slate-700/60">
-                    <button onclick="switchTab('concepts')" id="tab-concepts" class="px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-700/50">
-                        📖 מושגי יסוד
-                    </button>
-                    <button onclick="switchTab('ptable')" id="tab-ptable" class="px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-700/50">
-                        🔬 הטבלה המחזורית
-                    </button>
-                    <button onclick="switchTab('quiz')" id="tab-quiz" class="px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-700/50">
-                        ✏️ מבחן תרגול
-                    </button>
-                    <button onclick="switchTab('github')" id="tab-github" class="px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 bg-amber-500 text-slate-950 shadow-md">
-                        🚀 העלאה ל-GitHub
-                    </button>
-                </nav>
-            </div>
-        </div>
-    </header>
+    button.action {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
 
-    <!-- Main Content Area -->
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    button.secondary {
+      background: #e2e8f0;
+      color: var(--ink);
+      border: none;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
 
-        <!-- TAB 1: CONCEPTS & ILLUSTRATIONS -->
-        <section id="sec-concepts" class="space-y-8 hidden">
-            <div class="text-center max-w-3xl mx-auto space-y-2">
-                <h2 class="text-3xl font-bold text-teal-400">סיכום מושגי הליבה למבחן</h2>
-                <p class="text-slate-300 text-base">למדו את ההגדרות, המודלים החלקיקיים ומבנה האטום בעזרת התרשימים החזותיים לפני שתגשו לתרגול.</p>
-            </div>
+    .mol-box {
+      background: #f8fafc;
+      border: 1px dashed #94a3b8;
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 10px;
+    }
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    canvas {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      height: 220px;
+      margin: 10px auto;
+      background: #0f172a;
+      border-radius: 10px;
+    }
 
-                <!-- Card 1: Element vs Compound vs Mixture -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-teal-500/50 transition-all">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-teal-400"></span>
-                                יסוד, תרכובת ותערובת
-                            </h3>
-                            <span class="text-xs bg-teal-950 text-teal-300 px-2 py-1 rounded-md border border-teal-800">סיווג חומרים</span>
-                        </div>
-                        <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                            <strong class="text-teal-300">יסוד:</strong> חומר טהור שכל אטומיו ממין אחד בלבד (אינו ניתן לפירוק כימי).<br>
-                            <strong class="text-teal-300">תרכובת:</strong> חומר טהור מחיבור כימי של 2 יסודות או יותר ביחס קבוע, בעל תכונות חדשות לחלוטין.<br>
-                            <strong class="text-teal-300">תערובת:</strong> ערבוב פיזי של חומרים ללא קשר כימי (כל חומר שומר על תכונותיו).
-                        </p>
-                    </div>
+    .q-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+      background: #fafcff;
+    }
 
-                    <!-- SVG Visual Model -->
-                    <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-700/80">
-                        <div class="text-center text-xs text-slate-400 mb-2 font-bold">מודל חלקיקי חזותי</div>
-                        <svg viewBox="0 0 320 100" class="w-full h-auto">
-                            <!-- Element O2 -->
-                            <g transform="translate(10, 10)">
-                                <rect x="0" y="0" width="90" height="75" rx="8" fill="#1e293b" stroke="#334155"></rect>
-                                <circle cx="33" cy="38" r="14" fill="#0d9488" stroke="#5eead4" stroke-width="2"></circle>
-                                <circle cx="55" cy="38" r="14" fill="#0d9488" stroke="#5eead4" stroke-width="2"></circle>
-                                <text x="45" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">יסוד (O₂)</text>
-                            </g>
-                            <!-- Compound H2O -->
-                            <g transform="translate(115, 10)">
-                                <rect x="0" y="0" width="90" height="75" rx="8" fill="#1e293b" stroke="#334155"></rect>
-                                <circle cx="45" cy="33" r="15" fill="#ef4444" stroke="#fca5a5" stroke-width="2"></circle>
-                                <circle cx="31" cy="48" r="9" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"></circle>
-                                <circle cx="59" cy="48" r="9" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"></circle>
-                                <text x="45" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">תרכובת (H₂O)</text>
-                            </g>
-                            <!-- Mixture -->
-                            <g transform="translate(220, 10)">
-                                <rect x="0" y="0" width="90" height="75" rx="8" fill="#1e293b" stroke="#334155"></rect>
-                                <circle cx="28" cy="28" r="11" fill="#0d9488"></circle>
-                                <circle cx="62" cy="48" r="10" fill="#f59e0b"></circle>
-                                <circle cx="35" cy="52" r="8" fill="#3b82f6"></circle>
-                                <text x="45" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">תערובת</text>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
+    .q-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
 
-                <!-- Card 2: Atomic Structure -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-teal-500/50 transition-all">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
-                                מבנה האטום והחלקיקים
-                            </h3>
-                            <span class="text-xs bg-cyan-950 text-cyan-300 px-2 py-1 rounded-md border border-cyan-800">מבנה החומר</span>
-                        </div>
-                        <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                            <strong class="text-cyan-300">גרעין האטום:</strong> מכיל <strong>פרוטונים (+)</strong> ו<strong>נויטרונים (ניטרליים)</strong>.<br>
-                            <strong class="text-cyan-300">ענן אלקטרונים:</strong> <strong>אלקטרונים (-)</strong> נעים ברמות אנרגיה סביב הגרעין.<br>
-                            <strong class="text-cyan-300">אטום ניטרלי:</strong> מספר הפרוטונים שווה למספר האלקטרונים!
-                        </p>
-                    </div>
+    .opt-label {
+      display: block;
+      padding: 6px 10px;
+      margin: 4px 0;
+      border-radius: 7px;
+      border: 1px solid #e2e8f0;
+      cursor: pointer;
+      background: #fff;
+    }
 
-                    <!-- SVG Atomic Diagram -->
-                    <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-700/80">
-                        <div class="text-center text-xs text-slate-400 mb-1 font-bold">דגם אטום פחמן (Z=6)</div>
-                        <svg viewBox="0 0 200 120" class="w-full h-auto">
-                            <!-- Electron shells -->
-                            <ellipse cx="100" cy="60" rx="80" ry="32" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,3"></ellipse>
-                            <ellipse cx="100" cy="60" rx="45" ry="18" fill="none" stroke="#475569" stroke-width="1.5"></ellipse>
-                            <!-- Nucleus -->
-                            <circle cx="100" cy="60" r="18" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"></circle>
-                            <!-- Protons & Neutrons -->
-                            <circle cx="95" cy="56" r="5" fill="#ef4444"></circle>
-                            <circle cx="105" cy="58" r="5" fill="#3b82f6"></circle>
-                            <circle cx="98" cy="65" r="5" fill="#ef4444"></circle>
-                            <circle cx="104" cy="52" r="5" fill="#94a3b8"></circle>
-                            <text x="100" y="63" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="bold">+ -</text>
-                            <!-- Orbiting Electrons -->
-                            <circle cx="20" cy="60" r="4.5" fill="#38bdf8"></circle>
-                            <circle cx="180" cy="60" r="4.5" fill="#38bdf8"></circle>
-                            <circle cx="100" cy="28" r="4.5" fill="#38bdf8"></circle>
-                            <circle cx="100" cy="92" r="4.5" fill="#38bdf8"></circle>
+    .opt-label input {
+      margin-left: 8px;
+    }
 
-                            <!-- Labels -->
-                            <text x="100" y="114" fill="#38bdf8" font-size="9" text-anchor="middle">אלקטרונים (-) ברמות אנרגיה</text>
-                        </svg>
-                    </div>
-                </div>
+    .feedback {
+      margin-top: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+    }
 
-                <!-- Card 3: Atomic Number & Periodic Table Tile -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-teal-500/50 transition-all md:col-span-2 lg:col-span-1">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-amber-400"></span>
-                                מספר אטומי וחוק שימור המסה
-                            </h3>
-                            <span class="text-xs bg-amber-950 text-amber-300 px-2 py-1 rounded-md border border-amber-800">חוקי כימיה</span>
-                        </div>
-                        <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                            <strong class="text-amber-300">מספר אטומי (Z):</strong> מספר הפרוטונים בגרעין. **קובע בלעדית את זהות היסוד!**<br>
-                            <strong class="text-amber-300">חוק שימור המסה:</strong> בתגובה כימית במערכת סגורה, מסת המגיבים שווה למסת התוצרים (אטומים אינם נעלמים אלא מסתדרים מחדש).
-                        </p>
-                    </div>
+    .feedback.ok {
+      background: var(--ok-soft);
+      color: var(--ok);
+    }
 
-                    <!-- SVG Tile Explainer -->
-                    <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-700/80 flex items-center justify-center">
-                        <svg viewBox="0 0 240 110" class="w-full h-auto">
-                            <!-- Tile box -->
-                            <rect x="70" y="10" width="100" height="90" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"></rect>
-                            <!-- Z number -->
-                            <text x="82" y="32" fill="#f59e0b" font-size="16" font-weight="bold">6</text>
-                            <text x="120" y="60" fill="#ffffff" font-size="28" font-weight="900" text-anchor="middle">C</text>
-                            <text x="120" y="78" fill="#cbd5e1" font-size="11" text-anchor="middle">פחמן</text>
-                            <text x="120" y="93" fill="#94a3b8" font-size="10" text-anchor="middle">12.011</text>
+    .feedback.bad {
+      background: var(--bad-soft);
+      color: var(--bad);
+    }
 
-                            <!-- Arrows and Callouts -->
-                            <path d="M 65 25 L 30 25" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow)"></path>
-                            <text x="25" y="28" fill="#f59e0b" font-size="9" text-anchor="end">מספר אטומי (פרוטונים)</text>
+    .score-banner {
+      padding: 14px;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--ink);
+      font-weight: 700;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>הכנה למבחן בכימיה - כיתה ט'</h1>
+    <p>מבוסס על סיכומי המחברת - יסודות, סימול כימי, מתכות ואל-מתכות, משפחות כימיות, תרכובות ותערובות</p>
+  </header>
 
-                            <path d="M 175 52 L 205 52" stroke="#38bdf8" stroke-width="1.5"></path>
-                            <text x="210" y="55" fill="#38bdf8" font-size="9" text-anchor="start">סמל כימי</text>
-
-                            <path d="M 175 90 L 205 90" stroke="#94a3b8" stroke-width="1.5"></path>
-                            <text x="210" y="93" fill="#94a3b8" font-size="9" text-anchor="start">מסה אטומית</text>
-                        </svg>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- TAB 2: INTERACTIVE PERIODIC TABLE & TILE DECODER -->
-        <section id="sec-ptable" class="hidden space-y-8">
-            <div class="text-center max-w-3xl mx-auto space-y-2">
-                <h2 class="text-3xl font-bold text-teal-400">רישום מהטבלה המחזורית - היסודות למבחן</h2>
-                <p class="text-slate-300 text-sm sm:text-base">לחצו על כל יסוד בטבלה כדי לפענח את המבנה האטומי, מספר הפרוטונים, האלקטרונים והמסה שלו.</p>
-            </div>
-
-            <!-- Grid & Detail Panel Layout -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                
-                <!-- Elements Grid -->
-                <div class="lg:col-span-2 glass-card rounded-2xl p-6 border border-slate-700">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center justify-between">
-                        <span>בחר יסוד מהטבלה:</span>
-                        <span class="text-xs font-normal text-slate-400">16 יסודות מרכזיים לכיתה ט'</span>
-                    </h3>
-
-                    <div id="elements-grid" class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-2">
-                <button onclick="selectElement(1)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">1</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">H</div>
-                    <div class="text-[11px] truncate text-slate-400">מימן</div>
-                </button>
-            
-                <button onclick="selectElement(6)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-teal-500/20 border-teal-400 text-white shadow-lg scale-105">
-                    <div class="text-[10px] text-teal-400 font-bold">6</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">C</div>
-                    <div class="text-[11px] truncate text-slate-400">פחמן</div>
-                </button>
-            
-                <button onclick="selectElement(7)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">7</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">N</div>
-                    <div class="text-[11px] truncate text-slate-400">חנקן</div>
-                </button>
-            
-                <button onclick="selectElement(8)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">8</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">O</div>
-                    <div class="text-[11px] truncate text-slate-400">חמצן</div>
-                </button>
-            
-                <button onclick="selectElement(11)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">11</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Na</div>
-                    <div class="text-[11px] truncate text-slate-400">נתרן</div>
-                </button>
-            
-                <button onclick="selectElement(12)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">12</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Mg</div>
-                    <div class="text-[11px] truncate text-slate-400">מגנזיום</div>
-                </button>
-            
-                <button onclick="selectElement(13)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">13</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Al</div>
-                    <div class="text-[11px] truncate text-slate-400">אלומיניום</div>
-                </button>
-            
-                <button onclick="selectElement(14)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">14</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Si</div>
-                    <div class="text-[11px] truncate text-slate-400">צורן (סיליקון)</div>
-                </button>
-            
-                <button onclick="selectElement(15)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">15</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">P</div>
-                    <div class="text-[11px] truncate text-slate-400">זבלן (זורחן)</div>
-                </button>
-            
-                <button onclick="selectElement(16)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">16</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">S</div>
-                    <div class="text-[11px] truncate text-slate-400">גופרית</div>
-                </button>
-            
-                <button onclick="selectElement(17)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">17</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Cl</div>
-                    <div class="text-[11px] truncate text-slate-400">כלור</div>
-                </button>
-            
-                <button onclick="selectElement(19)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">19</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">K</div>
-                    <div class="text-[11px] truncate text-slate-400">אשלגן</div>
-                </button>
-            
-                <button onclick="selectElement(20)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">20</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Ca</div>
-                    <div class="text-[11px] truncate text-slate-400">סידן</div>
-                </button>
-            
-                <button onclick="selectElement(26)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">26</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Fe</div>
-                    <div class="text-[11px] truncate text-slate-400">ברזל</div>
-                </button>
-            
-                <button onclick="selectElement(29)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">29</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Cu</div>
-                    <div class="text-[11px] truncate text-slate-400">נחושת</div>
-                </button>
-            
-                <button onclick="selectElement(79)" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500">
-                    <div class="text-[10px] text-teal-400 font-bold">79</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">Au</div>
-                    <div class="text-[11px] truncate text-slate-400">זהב</div>
-                </button>
-            </div>
-                </div>
-
-                <!-- Element Detail Card -->
-                <div class="glass-card rounded-2xl p-6 border border-teal-500/40 relative overflow-hidden bg-gradient-to-b from-slate-800 to-slate-900">
-                    <div id="element-detail-content" class="space-y-6">
-                <div class="text-center pb-4 border-b border-slate-700">
-                    <span class="text-xs bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full border border-teal-500/30 font-semibold">אל-מתכת</span>
-                    <h3 class="text-2xl font-black text-white mt-3">פחמן (C)</h3>
-                    <p class="text-xs text-slate-400 mt-1">אטום ניטרלי בטבלה המחזורית</p>
-                </div>
-
-                <!-- Big Interactive SVG Tile -->
-                <div class="bg-slate-950 rounded-2xl p-6 border border-slate-800 text-center relative shadow-inner">
-                    <div class="text-right text-xs text-teal-400 font-bold">מספר אטומי (Z) = 6</div>
-                    <div class="text-5xl font-black text-white my-2 tracking-wide">C</div>
-                    <div class="text-sm font-bold text-slate-300">פחמן</div>
-                    <div class="text-xs text-slate-500 mt-1">מסה אטומית: 12.011</div>
-                </div>
-
-                <!-- Atomic Structure Stats -->
-                <div class="space-y-3">
-                    <div class="flex justify-between items-center p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 text-sm">
-                        <span class="text-slate-300">פרוטונים בגרעין (+):</span>
-                        <span class="font-extrabold text-teal-400 text-base">6</span>
-                    </div>
-                    <div class="flex justify-between items-center p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 text-sm">
-                        <span class="text-slate-300">אלקטרונים באטום ניטרלי (-):</span>
-                        <span class="font-extrabold text-cyan-400 text-base">6</span>
-                    </div>
-                </div>
-
-                <!-- Fun / Exam Fact -->
-                <div class="bg-teal-950/40 border border-teal-800/60 p-4 rounded-xl text-xs text-teal-200 leading-relaxed">
-                    <strong class="text-teal-400 block mb-1">💡 נקודה מרכזית למבחן:</strong>
-                    הבסיס לכל הכימיה האורגנית והחיים בכדור הארץ.
-                </div>
-            </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- TAB 3: INTERACTIVE QUIZ -->
-        <section id="sec-quiz" class="hidden space-y-8">
-            
-            <!-- Quiz Score & Progress Bar -->
-            <div class="glass-card rounded-2xl p-6 border border-teal-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-2xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-300 font-extrabold text-2xl" id="score-badge">0%</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white">מבחן תרגול בכימיה לכיתה ט'</h3>
-                        <p class="text-slate-400 text-sm" id="progress-text">נענו 0 מתוך 8 שאלות</p>
-                    </div>
-                </div>
-                
-                <!-- Progress bar container -->
-                <div class="w-full md:w-64 bg-slate-800 rounded-full h-3 border border-slate-700 overflow-hidden">
-                    <div id="progress-bar" class="bg-gradient-to-r from-teal-500 to-cyan-400 h-full w-0 transition-all duration-300" style="width: 0%;"></div>
-                </div>
-
-                <button onclick="resetQuiz()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 rounded-xl text-sm font-bold transition">
-                    🔄 התחל מחדש
-                </button>
-            </div>
-
-            <!-- Quiz Questions Container -->
-            <div id="quiz-container" class="space-y-6">
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 1</span>
-                            <span class="text-xs text-slate-400 font-semibold">זיהוי מודל חלקיקי (יסוד לעומת תרכובת)</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">לפניך תרשים חלקיקי. קבע איזה חומר מוצג בתרשים ואיזה נימוק הוא הנכון ביותר:</h4>
-                        
-                    <svg viewBox="0 0 300 90" class="w-full h-24 bg-slate-950 rounded-xl border border-slate-800 my-2">
-                        <g transform="translate(30, 15)">
-                            <circle cx="30" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"></circle>
-                            <circle cx="52" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"></circle>
-                        </g>
-                        <g transform="translate(160, 15)">
-                            <circle cx="30" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"></circle>
-                            <circle cx="52" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"></circle>
-                        </g>
-                    </svg>
-                
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(1, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זוהי תרכובת, מכיוון שיש כאן זוגות חלקיקים הקשורים זה לזה.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(1, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זהו יסוד, מכיוון שכל המולקולות מורכבות מאטומים מאותו סוג בלבד.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(1, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זוהי תערובת של שני יסודות שונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(1, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זוהי תתרכובת של גז חמצן עם גז מימן.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 2</span>
-                            <span class="text-xs text-slate-400 font-semibold">תכונות תרכובת מול היסודות המרכיבים אותה</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">מלח בישול (נתרן כלורי - NaCl) נוצר מתגובה כימית בין נתרן (מתכת רכה ופעילה) לבין כלור (גז ירוק ורעיל). מה ניתן ללמוד מכך על תכונות התרכובת?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(2, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>תכונות התרכובת הן ממוצע של תכונות הנתרן והכלור.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(2, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>התרכובת שומרת על הרעילות של הכלור והרכות של הנתרן.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(2, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>בתרכובת נוצר חומר חדש בעל תכונות שונות לחלוטין מתכונות היסודות מהם נוצר.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(2, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>תכונות התרכובת נקבעות רק לפי היסוד שנמצא בכמות גדולה יותר.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 3</span>
-                            <span class="text-xs text-slate-400 font-semibold">מספר אטומי ומבנה האטום הניטרלי</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">לאטום חמצן ניטרלי יש מספר אטומי Z=8. כמה פרוטונים וכמה אלקטרונים יש באטום זה?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(3, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>8 פרוטונים ו-8 אלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(3, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>8 פרוטונים ו-16 אלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(3, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>4 פרוטונים ו-4 נויטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(3, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>16 פרוטונים ו-8 אלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 4</span>
-                            <span class="text-xs text-slate-400 font-semibold">קביעת המספר האטומי (נכון / לא נכון)</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">תלמיד טען: "המספר האטומי של אטום נקבע לפי מספר הנויטרונים בגרעין שלו". האם טענתו נכונה?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(4, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>נכון, הנויטרונים הם החלקיקים הכבדים ביותר ולכן הם קובעים את המספר האטומי.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(4, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>לא נכון! המספר האטומי נקבע אך ורק לפי מספר הפרוטונים בגרעין.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(4, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>לא נכון! המספר האטומי נקבע לפי מספר רמות האנרגיה של האלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(4, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>נכון, בתנאי מפתח שהאטום נמצא במצב צבירה גז.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 5</span>
-                            <span class="text-xs text-slate-400 font-semibold">סיווג חומרים - פחמימנים</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">חומר מסוים בנוי ממולקולות שבהן קשורים יחד אטומי פחמן (C) ואטומי מימן (H) בלבד בקשר כימי. כיצד נסווג חומר זה?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(5, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זהו יסוד, כיוון שהוא מכיל גז מימן.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(5, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זוהי תערובת של שני יסודות גזיים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(5, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זוהי תרכובת (פחמימן), כיוון שקשורים בה אטומים של יסודות שונים ביחס כימי.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(5, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>זהו אטום יחיד בעל שני גרעינים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 6</span>
-                            <span class="text-xs text-slate-400 font-semibold">חוק שימור המסה בתגובה כימית</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">שורפים חתיכת עץ בתוך מכל סגור ואטום לחלוטין. מה יקרה למסה הכוללת של המכל והחומרים שבתוכו לאחר הבעירה?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(6, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>המסה תרד, כי חלק מהעץ הפך לעשן וגזים שנעלמו.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(6, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>המסה תעלה, כי הבעירה מוסיפה אנרגיה ומסה למערכת.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(6, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>המסה תישאר ללא שינוי, לפי חוק שימור המסה במערכת סגורה.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(6, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>המסה תתאפס מכיוון שהעץ נשרף כליל.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 7</span>
-                            <span class="text-xs text-slate-400 font-semibold">שינוי כימי לעומת שינוי פיזיקלי</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">מה מהבאים מתאר שינוי כימי (ולא שינוי פיזיקלי)?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(7, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>התכת קוביות קרח מים מוצקים למים נוזליים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(7, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>המסת סוכר בתוך כוס תה חם.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(7, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>החלדת מסמר ברזל במגע עם חמצן ומים (יצירת תחמוצת ברזל).</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(7, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>גזירת דף נייר לחתיכות קטנות.</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                
-                    <div class="glass-card rounded-2xl p-6 border border-slate-700/70 transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה 8</span>
-                            <span class="text-xs text-slate-400 font-semibold">פענוח אטום מגנזיום (Z=12)</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">בטבלה המחזורית רשום עבור מגנזיום: Z=12. כמה אלקטרונים נעים סביב גרעין אטום מגנזיום ניטרלי?</h4>
-                        
-
-                        <div class="space-y-2.5 mt-4">
-                            
-                                    <button onclick="answerQuestion(8, 0)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>6 אלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(8, 1)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>12 אלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(8, 2)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>24 אלקטרונים.</span>
-                                        
-                                        
-                                    </button>
-                                
-                                    <button onclick="answerQuestion(8, 3)" class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80">
-                                        <span>0 אלקטרונים (אלקטרונים נמצאים בתוך הגרעין).</span>
-                                        
-                                        
-                                    </button>
-                                
-                        </div>
-
-                        
-                    </div>
-                </div>
-
-            <!-- Quiz Finish Banner (hidden initially) -->
-            <div id="quiz-summary" class="hidden glass-card rounded-2xl p-8 border border-teal-500 text-center space-y-6 bg-gradient-to-b from-slate-900 to-teal-950">
-                <div class="inline-flex p-4 bg-teal-500/20 rounded-full text-teal-400 mb-2">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-3xl font-black text-white">כל הכבוד! סיימת את התרגול</h3>
-                <p id="summary-score-text" class="text-xl text-teal-300 font-bold"></p>
-                <p class="text-slate-300 max-w-lg mx-auto text-sm leading-relaxed">
-                    סקור את התשובות וההסברים למעלה כדי לוודא שאתה שולט בכל המושגים לקראת המבחן!
-                </p>
-                <button onclick="resetQuiz()" class="px-8 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
-                    תרגול נוסף מחדש 🚀
-                </button>
-            </div>
-        </section>
-
-        <!-- TAB 4: GITHUB PAGES HELPER FOR TEACHERS & PARENTS -->
-        <section id="sec-github" class="space-y-8">
-            <div class="glass-card rounded-2xl p-6 sm:p-8 border border-amber-500/40 bg-slate-900/90">
-                <div class="flex items-center gap-3 text-amber-400 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <h2 class="text-2xl font-bold text-white">איך להעלות דף זה ל-GitHub Pages בחינם?</h2>
-                </div>
-
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                    דף זה נכתב כקובץ יחיד ועצמאי לחלוטין (Single File HTML). תוכלו לשמור אותו במחשב או בנייד ולהעלות אותו לשרת בחינם ב-3 צעדים פשוטים:
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-2">
-                        <div class="w-8 h-8 bg-amber-500/20 text-amber-400 rounded-lg flex items-center justify-center font-bold">1</div>
-                        <h4 class="font-bold text-white">שמירת הקובץ</h4>
-                        <p class="text-xs text-slate-300">שמרו קובץ זה במחשב בשם המדויק: <code class="bg-slate-950 text-amber-300 px-1.5 py-0.5 rounded font-mono">index.html</code></p>
-                    </div>
-
-                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-2">
-                        <div class="w-8 h-8 bg-amber-500/20 text-amber-400 rounded-lg flex items-center justify-center font-bold">2</div>
-                        <h4 class="font-bold text-white">העלאה ל-GitHub</h4>
-                        <p class="text-xs text-slate-300">צרו מאגר (Repository) ציבורי חדש ב-GitHub וגררו אליו את הקובץ <code class="bg-slate-950 text-amber-300 px-1.5 py-0.5 rounded font-mono">index.html</code>.</p>
-                    </div>
-
-                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-2">
-                        <div class="w-8 h-8 bg-amber-500/20 text-amber-400 rounded-lg flex items-center justify-center font-bold">3</div>
-                        <h4 class="font-bold text-white">הפעלת GitHub Pages</h4>
-                        <p class="text-xs text-slate-300">בהגדרות (Settings -&gt; Pages) בחרו ב-Branch <code class="bg-slate-950 text-amber-300 px-1.5 py-0.5 rounded font-mono">main</code> ולחצו Save. תוך דקה האתר באוויר!</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="text-xs text-slate-400">
-                        <strong class="text-slate-200">טיפ למורים:</strong> ניתן לשלוח את הקישור שמתקבל ישירות לתלמידים בוואטסאפ או במערכת המשוב/Google Classroom.
-                    </div>
-                    <button onclick="copyCurrentCode()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-sm transition flex items-center gap-2 whitespace-nowrap">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
-                        </svg>
-                        העתק קוד HTML מלא
-                    </button>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Custom Notification Box (replaces alert) -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-teal-500 text-slate-950 px-6 py-3 rounded-xl font-bold shadow-2xl transition-all duration-300 transform z-50 flex items-center gap-2 translate-y-20 opacity-0">
-        <span id="toast-message">הקוד הועתק בהצלחה ללוח!</span>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab('learn', this)">תיקיית למידה</button>
+      <button class="tab-btn" onclick="openTab('exam', this)">תיקיית בחינה</button>
+      <button class="tab-btn" onclick="openTab('challenge', this)">תיקיית אתגר (מיצ"ב)</button>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>ערכת הכנה אינטראקטיבית למבחן בכימיה - כיתה ט' | חומרי לימוד, תרשימי SVG ומבחן תרגול עצמי</p>
-            <p class="mt-1 text-slate-600">נבנה להתאמה מלאה לכל המכשירים ולפרסום מהיר ב-GitHub Pages</p>
+    <!-- תיקיית למידה -->
+    <section id="learn" class="panel active">
+      <div class="card">
+        <h2>1. יסודות, תרכובות ותערובות</h2>
+        <div class="grid-2">
+          <div>
+            <h3>יסוד</h3>
+            <p>חומר טהור הבנוי מסוג אחד בלבד של אטומים, ולא ניתן לפרק אותו בתהליכים כימיים רגילים לחומרים פשוטים יותר. יסודות יכולים להופיע כאטומים בודדים או כמולקולות.</p>
+          </div>
+          <div>
+            <h3>תרכובת</h3>
+            <p>שני יסודות או יותר היוצרים ביניהם קשר כימי ומתקבל חומר חדש בעל תכונות חדשות השונות מתכונות היסודות המרכיבים אותו. בתוך מולקולה של תרכובת יש אטומים שונים.</p>
+          </div>
+          <div>
+            <h3>תערובת</h3>
+            <p>שני חומרים או יותר המעורבים יחד ואינם יוצרים קשר כימי ביניהם, ולכן כל אחד מן החומרים שומר על תכונותיו (למשל אוויר כתערובת של גזים כמו חנקן, חמצן, פחמן דו-חמצני, הליום וארגון).</p>
+          </div>
+          <div>
+            <h3>9 היסודות המולקולריים מהמחברת</h3>
+            <div class="pill-list">
+              <span class="pill">מימן H₂</span>
+              <span class="pill">חמצן O₂</span>
+              <span class="pill">כלור Cl₂</span>
+              <span class="pill">יוד I₂</span>
+              <span class="pill">פלואור F₂</span>
+              <span class="pill">ברום Br₂</span>
+              <span class="pill">גופרית S₈</span>
+              <span class="pill">זרחן P₄</span>
+              <span class="pill">חנקן N₂</span>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <!-- JavaScript Logic -->
-    <script>
-        // --- 1. PERIODIC TABLE DATA ---
-        const elementsData = [
-            { z: 1, symbol: 'H', name: 'מימן', mass: '1.008', group: 'אל-מתכת', protons: 1, electrons: 1, fact: 'היסוד הקל והשכיח ביותר ביקום.' },
-            { z: 6, symbol: 'C', name: 'פחמן', mass: '12.011', group: 'אל-מתכת', protons: 6, electrons: 6, fact: 'הבסיס לכל הכימיה האורגנית והחיים בכדור הארץ.' },
-            { z: 7, symbol: 'N', name: 'חנקן', mass: '14.007', group: 'אל-מתכת', protons: 7, electrons: 7, fact: 'מהווה כ-78% מהאוויר שאנו נושמים.' },
-            { z: 8, symbol: 'O', name: 'חמצן', mass: '15.999', group: 'אל-מתכת', protons: 8, electrons: 8, fact: 'חיוני לנשימה ותהליכי בעירה.' },
-            { z: 11, symbol: 'Na', name: 'נתרן', mass: '22.990', group: 'מתכת אלקלית', protons: 11, electrons: 11, fact: 'מתכת רכה ופעילה מאוד, מרכיב במלח בישול (NaCl).' },
-            { z: 12, symbol: 'Mg', name: 'מגנזיום', mass: '24.305', group: 'מתכת אלקלית-עפרית', protons: 12, electrons: 12, fact: 'בוער בלהקה לבנה בוהקת, חיוני בכלורופיל בצמחים.' },
-            { z: 13, symbol: 'Al', name: 'אלומיניום', mass: '26.982', group: 'מתכת', protons: 13, electrons: 13, fact: 'מתכת קלה ועמידה בפני קורוזיה.' },
-            { z: 14, symbol: 'Si', name: 'צורן (סיליקון)', mass: '28.085', group: 'מתכת למחצה', protons: 14, electrons: 14, fact: 'הבסיס לשבבי מחשב ולזכוכית.' },
-            { z: 15, symbol: 'P', name: 'זבלן (זורחן)', mass: '30.974', group: 'אל-מתכת', protons: 15, electrons: 15, fact: 'חיוני ל-DNA ואינטגרלי בעצמות ושיניים.' },
-            { z: 16, symbol: 'S', name: 'גופרית', mass: '32.06', group: 'אל-מתכת', protons: 16, electrons: 16, fact: 'יסוד צהוב בעל ריח אופייני בתרכובות מסוימות.' },
-            { z: 17, symbol: 'Cl', name: 'כלור', mass: '35.45', group: 'הלוגן (אל-מתכת)', protons: 17, electrons: 17, fact: 'גז רעיל במצבו החופשי (Cl₂), מרכיב במלח בישול.' },
-            { z: 19, symbol: 'K', name: 'אשלגן', mass: '39.098', group: 'מתכת אלקלית', protons: 19, electrons: 19, fact: 'חיוני לתפקוד תאי העצב והשרירים בגוף.' },
-            { z: 20, symbol: 'Ca', name: 'סידן', mass: '40.078', group: 'מתכת אלקלית-עפרית', protons: 20, electrons: 20, fact: 'בונה עצמות ושיניים וחיוני להתכווצות שרירים.' },
-            { z: 26, symbol: 'Fe', name: 'ברזל', mass: '55.845', group: 'מתכת מעבר', protons: 26, electrons: 26, fact: 'מרכיב מרכזי בהמוגלובין המסיע חמצן בדם.' },
-            { z: 29, symbol: 'Cu', name: 'נחושת', mass: '63.546', group: 'מתכת מעבר', protons: 29, electrons: 29, fact: 'מוליך חשמל מעולה המשמש בחוטי חשמל.' },
-            { z: 79, symbol: 'Au', name: 'זהב', mass: '196.97', group: 'מתכת מעבר', protons: 79, electrons: 79, fact: 'מתכת אצילה שאינה מחלידה ובעלת ברק ייחודי.' }
-        ];
+      <div class="card">
+        <h2>2. סימול כימי, מתכות, אל-מתכות ומשפחות כימיות</h2>
+        <p>בסימול כימי של יסוד רושמים אות לטינית גדולה בתחילת הסימול ואות קטנה נוספת במידת הצורך (למשל Ca, Na, Cu, Cl, N, C, H, Mg, Zn, Fe, Au, S, Br). אות גדולה מסמנת סוג חדש של אטום.</p>
+        <div class="grid-2">
+          <div>
+            <h3>מתכות מול אל-מתכות</h3>
+            <p><strong>מתכות</strong> לרוב מוצקות בטמפרטורת החדר (מלבד כספית), מוליכות חשמל וחום, בעלות ברק מתכתי וניתנות לריקוע ולמשיכה (כמו ברזל, זהב, כסף, נחושת, מגנזיום, אבץ, אלומיניום, נתרן).</p>
+            <p><strong>אל-מתכות</strong> מופיעות כמוצקים, נוזלים או גזים בטמפרטורת החדר, לרוב אינן מוליכות חשמל (מלבד גרפיט) ואינן מבריקות (כמו חמצן, חנקן, גופרית, פחמן, כלור, ברום, יוד).</p>
+          </div>
+          <div>
+            <h3>משפחות כימיות</h3>
+            <p><strong>משפחת המתכות האלקליות</strong> מתכות פעילות מאוד (כמו נתרן Na).</p>
+            <p><strong>משפחת ההלוגנים</strong> אל-מתכות מולקולריות פעילות (כמו פלואור, כלור, ברום, יוד).</p>
+            <p><strong>משפחת הגזים האצילים</strong> גזים יציבים ואטומיים (כמו הליום He, ניאון Ne, ארגון Ar, קריפטון Kr, קסנון Xe).</p>
+          </div>
+        </div>
+      </div>
 
-        let selectedElement = elementsData[1]; // Carbon default
+      <div class="card">
+        <h2>3. מציג מולקולות וספירת אטומים (לפי סיכומי המחברת)</h2>
+        <p>בחרי נוסחה מהרשימה כדי לראות תיאור מילולי, ספירת אטומים וייצוג חלקיקי.</p>
+        <div class="controls" id="molButtons"></div>
+        <div class="mol-box" id="molDisplay"></div>
+      </div>
 
-        // Render Periodic Table Tiles
-        function renderPeriodicGrid() {
-            const container = document.getElementById('elements-grid');
-            container.innerHTML = elementsData.map((el) => `
-                <button onclick="selectElement(${el.z})" class="p-2 sm:p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer ${el.z === selectedElement.z ? 'bg-teal-500/20 border-teal-400 text-white shadow-lg scale-105' : 'bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:border-slate-500'}">
-                    <div class="text-[10px] text-teal-400 font-bold">${el.z}</div>
-                    <div class="text-base sm:text-lg font-black tracking-tight">${el.symbol}</div>
-                    <div class="text-[11px] truncate text-slate-400">${el.name}</div>
-                </button>
-            `).join('');
-            
-            renderElementDetail();
-        }
+      <div class="card">
+        <h2>4. סרטו הרכבת התרכובת (הדמיה)</h2>
+        <p>צפי כיצד אטומים של יסודות שונים מתחברים ליצירת מולקולות של תרכובת חדשה.</p>
+        <div class="controls">
+          <button class="action" onclick="startReaction('water')">הרכבת מים (H₂ + O₂ → H₂O)</button>
+          <button class="action" onclick="startReaction('salt')">הרכבת מלח בישול (Na + Cl₂ → NaCl)</button>
+          <button class="secondary" onclick="resetReaction()">איפוס סרטון</button>
+        </div>
+        <canvas id="reactionCanvas" width="720" height="220"></canvas>
+        <div id="reactionCaption" class="pill-list">
+          <span class="pill">לחצי על כפתור הרכבה כדי להפעיל את ההדמיה</span>
+        </div>
+      </div>
+    </section>
 
-        function selectElement(z) {
-            selectedElement = elementsData.find(e => e.z === z);
-            renderPeriodicGrid();
-        }
+    <!-- תיקיית בחינה -->
+    <section id="exam" class="panel">
+      <div class="card">
+        <h2>תיקיית בחינה - שאלות מתחלפות</h2>
+        <p>בכל לחיצה על "שאלות חדשות" נבחרות שאלות חדשות מתוך מאגר השאלות המבוסס על המחברת. בסיום לחצי על "בדיקה וקבלת ציון".</p>
+        <div class="controls">
+          <button class="secondary" onclick="renderQuestions('exam')">שאלות חדשות</button>
+          <button class="action" onclick="gradeQuestions('exam')">בדיקה וקבלת ציון</button>
+        </div>
+        <div id="examQuestions"></div>
+        <div id="examScore"></div>
+      </div>
+    </section>
 
-        function renderElementDetail() {
-            const el = selectedElement;
-            const container = document.getElementById('element-detail-content');
-            container.innerHTML = `
-                <div class="text-center pb-4 border-b border-slate-700">
-                    <span class="text-xs bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full border border-teal-500/30 font-semibold">${el.group}</span>
-                    <h3 class="text-2xl font-black text-white mt-3">${el.name} (${el.symbol})</h3>
-                    <p class="text-xs text-slate-400 mt-1">אטום ניטרלי בטבלה המחזורית</p>
-                </div>
+    <!-- תיקיית אתגר -->
+    <section id="challenge" class="panel">
+      <div class="card">
+        <h2>תיקיית אתגר (רמת מיצ"ב) - שאלות מתחלפות</h2>
+        <p>שאלות אתגר לחשיבה מדעית, ספירת אטומים מורכבת, סימול כימי, השוואת תכונות תרכובת ליסודותיה והבחנה בין יסוד, תרכובת ותערובת.</p>
+        <div class="controls">
+          <button class="secondary" onclick="renderQuestions('challenge')">שאלות אתגר חדשות</button>
+          <button class="action" onclick="gradeQuestions('challenge')">בדיקה וקבלת ציון</button>
+        </div>
+        <div id="challengeQuestions"></div>
+        <div id="challengeScore"></div>
+      </div>
+    </section>
+  </div>
 
-                <!-- Big Interactive SVG Tile -->
-                <div class="bg-slate-950 rounded-2xl p-6 border border-slate-800 text-center relative shadow-inner">
-                    <div class="text-right text-xs text-teal-400 font-bold">מספר אטומי (Z) = ${el.z}</div>
-                    <div class="text-5xl font-black text-white my-2 tracking-wide">${el.symbol}</div>
-                    <div class="text-sm font-bold text-slate-300">${el.name}</div>
-                    <div class="text-xs text-slate-500 mt-1">מסה אטומית: ${el.mass}</div>
-                </div>
+  <script>
+    function openTab(tabId, btn) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+      if (tabId === 'learn') drawStaticScene();
+    }
 
-                <!-- Atomic Structure Stats -->
-                <div class="space-y-3">
-                    <div class="flex justify-between items-center p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 text-sm">
-                        <span class="text-slate-300">פרוטונים בגרעין (+):</span>
-                        <span class="font-extrabold text-teal-400 text-base">${el.protons}</span>
-                    </div>
-                    <div class="flex justify-between items-center p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 text-sm">
-                        <span class="text-slate-300">אלקטרונים באטום ניטרלי (-):</span>
-                        <span class="font-extrabold text-cyan-400 text-base">${el.electrons}</span>
-                    </div>
-                </div>
+    const moleculesData = [
+      {
+        formula: '3H₂O',
+        type: 'תרכובת (מולקולות)',
+        verbal: 'שלוש מולקולות שכל אחת מורכבת משני אטומי מימן ואטום חמצן אחד.',
+        counts: 'H = 3 × 2 = 6 אטומי מימן | O = 3 × 1 = 3 אטומי חמצן',
+        balls: [
+          { label: 'H', color: '#38bdf8' },
+          { label: 'O', color: '#f87171' },
+          { label: 'H', color: '#38bdf8' }
+        ],
+        repeat: 3
+      },
+      {
+        formula: '4NaCl(s)',
+        type: 'תרכובת',
+        verbal: 'ארבע יחידות של מלח בישול שכל אחת מורכבת מאטום נתרן ואטום כלור במצב מוצק.',
+        counts: 'Na = 4 × 1 = 4 אטומי נתרן | Cl = 4 × 1 = 4 אטומי כלור',
+        balls: [
+          { label: 'Na', color: '#facc15' },
+          { label: 'Cl', color: '#4ade80' }
+        ],
+        repeat: 4
+      },
+      {
+        formula: '2CaH₆(l)',
+        type: 'תרכובת',
+        verbal: 'שתי מולקולות שכל אחת מורכבת מאטום סידן אחד ושישה אטומי מימן במצב נוזל.',
+        counts: 'Ca = 2 × 1 = 2 אטומי סידן | H = 2 × 6 = 12 אטומי מימן',
+        balls: [
+          { label: 'Ca', color: '#c084fc' },
+          { label: 'H', color: '#38bdf8' }
+        ],
+        repeat: 2
+      },
+      {
+        formula: '3NH₃(g)',
+        type: 'תרכובת',
+        verbal: 'שלוש מולקולות שכל אחת מורכבת מאטום חנקן אחד ושלושה אטומי מימן במצב גז.',
+        counts: 'N = 3 × 1 = 3 אטומי חנקן | H = 3 × 3 = 9 אטומי מימן',
+        balls: [
+          { label: 'N', color: '#60a5fa' },
+          { label: 'H', color: '#38bdf8' }
+        ],
+        repeat: 3
+      },
+      {
+        formula: '4AlBr₃(s)',
+        type: 'תרכובת',
+        verbal: 'ארבע מולקולות שכל אחת מורכבת מאטום אלומיניום אחד ושלושה אטומי ברום במצב מוצק.',
+        counts: 'Al = 4 × 1 = 4 אטומי אלומיניום | Br = 4 × 3 = 12 אטומי ברום',
+        balls: [
+          { label: 'Al', color: '#cbd5e1' },
+          { label: 'Br', color: '#fb923c' }
+        ],
+        repeat: 4
+      },
+      {
+        formula: '8I₂',
+        type: 'יסוד (מולקולות)',
+        verbal: 'שמונה מולקולות שכל אחת מורכבת משני אטומי יוד.',
+        counts: 'I = 8 × 2 = 16 אטומי יוד',
+        balls: [
+          { label: 'I', color: '#a855f7' },
+          { label: 'I', color: '#a855f7' }
+        ],
+        repeat: 4
+      }
+    ];
 
-                <!-- Fun / Exam Fact -->
-                <div class="bg-teal-950/40 border border-teal-800/60 p-4 rounded-xl text-xs text-teal-200 leading-relaxed">
-                    <strong class="text-teal-400 block mb-1">💡 נקודה מרכזית למבחן:</strong>
-                    ${el.fact}
-                </div>
-            `;
-        }
-
-        // --- 2. QUIZ DATA & ENGINE ---
-        const quizQuestions = [
-            {
-                id: 1,
-                title: 'זיהוי מודל חלקיקי (יסוד לעומת תרכובת)',
-                question: 'לפניך תרשים חלקיקי. קבע איזה חומר מוצג בתרשים ואיזה נימוק הוא הנכון ביותר:',
-                svg: `
-                    <svg viewBox="0 0 300 90" class="w-full h-24 bg-slate-950 rounded-xl border border-slate-800 my-2">
-                        <g transform="translate(30, 15)">
-                            <circle cx="30" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"/>
-                            <circle cx="52" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"/>
-                        </g>
-                        <g transform="translate(160, 15)">
-                            <circle cx="30" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"/>
-                            <circle cx="52" cy="30" r="16" fill="#0d9488" stroke="#5eead4" stroke-width="2"/>
-                        </g>
-                    </svg>
-                `,
-                options: [
-                    'זוהי תרכובת, מכיוון שיש כאן זוגות חלקיקים הקשורים זה לזה.',
-                    'זהו יסוד, מכיוון שכל המולקולות מורכבות מאטומים מאותו סוג בלבד.',
-                    'זוהי תערובת של שני יסודות שונים.',
-                    'זוהי תתרכובת של גז חמצן עם גז מימן.'
-                ],
-                correct: 1,
-                explanation: 'נכון מאוד! כאשר מולקולה מורכבת מאטומים מאותו סוג בלבד (אותו צבע/גודל בתרשים), החומר מוגדר כ**יסוד** (למשל מולקולת חמצן O₂ או חנקן N₂).'
-            },
-            {
-                id: 2,
-                title: 'תכונות תרכובת מול היסודות המרכיבים אותה',
-                question: 'מלח בישול (נתרן כלורי - NaCl) נוצר מתגובה כימית בין נתרן (מתכת רכה ופעילה) לבין כלור (גז ירוק ורעיל). מה ניתן ללמוד מכך על תכונות התרכובת?',
-                options: [
-                    'תכונות התרכובת הן ממוצע של תכונות הנתרן והכלור.',
-                    'התרכובת שומרת על הרעילות של הכלור והרכות של הנתרן.',
-                    'בתרכובת נוצר חומר חדש בעל תכונות שונות לחלוטין מתכונות היסודות מהם נוצר.',
-                    'תכונות התרכובת נקבעות רק לפי היסוד שנמצא בכמות גדולה יותר.'
-                ],
-                correct: 2,
-                explanation: 'מדויק! זוהי נקודת מפתח בכימיה: תרכובת היא חומר חדש בעל תכונות חדשות ושונות לחלוטין מתכונות היסודות שהרכיבו אותה!'
-            },
-            {
-                id: 3,
-                title: 'מספר אטומי ומבנה האטום הניטרלי',
-                question: 'לאטום חמצן ניטרלי יש מספר אטומי Z=8. כמה פרוטונים וכמה אלקטרונים יש באטום זה?',
-                options: [
-                    '8 פרוטונים ו-8 אלקטרונים.',
-                    '8 פרוטונים ו-16 אלקטרונים.',
-                    '4 פרוטונים ו-4 נויטרונים.',
-                    '16 פרוטונים ו-8 אלקטרונים.'
-                ],
-                correct: 0,
-                explanation: 'נכון! המספר האטומי (Z=8) מציין 8 פרוטונים בגרעין. מכיוון שהאטום ניטרלי (ללא מטען חשמלי), מספר האלקטרונים השליליים שווה בדיוק למספר הפרוטונים החיוביים (8).'
-            },
-            {
-                id: 4,
-                title: 'קביעת המספר האטומי (נכון / לא נכון)',
-                question: 'תלמיד טען: "המספר האטומי של אטום נקבע לפי מספר הנויטרונים בגרעין שלו". האם טענתו נכונה?',
-                options: [
-                    'נכון, הנויטרונים הם החלקיקים הכבדים ביותר ולכן הם קובעים את המספר האטומי.',
-                    'לא נכון! המספר האטומי נקבע אך ורק לפי מספר הפרוטונים בגרעין.',
-                    'לא נכון! המספר האטומי נקבע לפי מספר רמות האנרגיה של האלקטרונים.',
-                    'נכון, בתנאי מפתח שהאטום נמצא במצב צבירה גז.'
-                ],
-                correct: 1,
-                explanation: 'כל הכבוד! המספר האטומי מוגדר **אך ורק לפי מספר הפרוטונים** בגרעין האטום. זהו ה"תעודת זהות" של היסוד.'
-            },
-            {
-                id: 5,
-                title: 'סיווג חומרים - פחמימנים',
-                question: 'חומר מסוים בנוי ממולקולות שבהן קשורים יחד אטומי פחמן (C) ואטומי מימן (H) בלבד בקשר כימי. כיצד נסווג חומר זה?',
-                options: [
-                    'זהו יסוד, כיוון שהוא מכיל גז מימן.',
-                    'זוהי תערובת של שני יסודות גזיים.',
-                    'זוהי תרכובת (פחמימן), כיוון שקשורים בה אטומים של יסודות שונים ביחס כימי.',
-                    'זהו אטום יחיד בעל שני גרעינים.'
-                ],
-                correct: 2,
-                explanation: 'נכון מאוד! חומר המורכב מאטומים של יסודות שונים (פחמן ומימן) הקשורים בקשר כימי מוגדר כ**תרכובת** (משפחת הפחמימנים).'
-            },
-            {
-                id: 6,
-                title: 'חוק שימור המסה בתגובה כימית',
-                question: 'שורפים חתיכת עץ בתוך מכל סגור ואטום לחלוטין. מה יקרה למסה הכוללת של המכל והחומרים שבתוכו לאחר הבעירה?',
-                options: [
-                    'המסה תרד, כי חלק מהעץ הפך לעשן וגזים שנעלמו.',
-                    'המסה תעלה, כי הבעירה מוסיפה אנרגיה ומסה למערכת.',
-                    'המסה תישאר ללא שינוי, לפי חוק שימור המסה במערכת סגורה.',
-                    'המסה תתאפס מכיוון שהעץ נשרף כליל.'
-                ],
-                correct: 2,
-                explanation: 'מצוין! לפי **חוק שימור המסה**, במערכת סגורה האטומים אינם נעלמים ואינם נוצרים מחדש אלא רק משנים את קשריהם. המסה הכוללת נשמרת מדויקת!'
-            },
-            {
-                id: 7,
-                title: 'שינוי כימי לעומת שינוי פיזיקלי',
-                question: 'מה מהבאים מתאר שינוי כימי (ולא שינוי פיזיקלי)?',
-                options: [
-                    'התכת קוביות קרח מים מוצקים למים נוזליים.',
-                    'המסת סוכר בתוך כוס תה חם.',
-                    'החלדת מסמר ברזל במגע עם חמצן ומים (יצירת תחמוצת ברזל).',
-                    'גזירת דף נייר לחתיכות קטנות.'
-                ],
-                correct: 2,
-                explanation: 'תשובה נכונה! החלדת ברזל היא תגובה כימית שבה נוצר חומר חדש (תחמוצת ברזל) בעל תכונות שונות. התכה, המסה וגזירה הן שינויים פיזיקליים בהם זהות החומר לא משתנה.'
-            },
-            {
-                id: 8,
-                title: 'פענוח אטום מגנזיום (Z=12)',
-                question: 'בטבלה המחזורית רשום עבור מגנזיום: Z=12. כמה אלקטרונים נעים סביב גרעין אטום מגנזיום ניטרלי?',
-                options: [
-                    '6 אלקטרונים.',
-                    '12 אלקטרונים.',
-                    '24 אלקטרונים.',
-                    '0 אלקטרונים (אלקטרונים נמצאים בתוך הגרעין).'
-                ],
-                correct: 1,
-                explanation: 'מעולה! מכיוון שהמספר האטומי Z=12 (12 פרוטונים), ובאטום ניטרלי מספר המטענים החיוביים והשליליים שווה - ישנם בדיוק 12 אלקטרונים.'
-            }
-        ];
-
-        let userAnswers = {};
-
-        function renderQuiz() {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = quizQuestions.map((q, idx) => {
-                const answered = userAnswers[q.id] !== undefined;
-                const selected = userAnswers[q.id];
-                const isCorrect = selected === q.correct;
-
-                return `
-                    <div class="glass-card rounded-2xl p-6 border ${answered ? (isCorrect ? 'border-teal-500/80 bg-teal-950/20' : 'border-rose-500/80 bg-rose-950/20') : 'border-slate-700/70'} transition-all duration-300">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-slate-800 text-teal-300 px-3 py-1 rounded-full border border-slate-700 font-bold">שאלה ${idx + 1}</span>
-                            <span class="text-xs text-slate-400 font-semibold">${q.title}</span>
-                        </div>
-                        
-                        <h4 class="text-lg font-bold text-white mb-2">${q.question}</h4>
-                        ${q.svg || ''}
-
-                        <div class="space-y-2.5 mt-4">
-                            ${q.options.map((opt, optIdx) => {
-                                let btnStyle = "bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700/80";
-                                if (answered) {
-                                    if (optIdx === q.correct) {
-                                        btnStyle = "bg-teal-500/20 text-teal-200 border-teal-500 font-bold ring-1 ring-teal-500";
-                                    } else if (optIdx === selected) {
-                                        btnStyle = "bg-rose-500/20 text-rose-200 border-rose-500 font-bold";
-                                    } else {
-                                        btnStyle = "bg-slate-900/40 text-slate-500 border-slate-800 opacity-50";
-                                    }
-                                }
-
-                                return `
-                                    <button onclick="answerQuestion(${q.id}, ${optIdx})" ${answered ? 'disabled' : ''} class="w-full text-right p-3.5 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between ${btnStyle}">
-                                        <span>${opt}</span>
-                                        ${answered && optIdx === q.correct ? '<span class="text-teal-400 font-bold text-base">✓</span>' : ''}
-                                        ${answered && optIdx === selected && !isCorrect ? '<span class="text-rose-400 font-bold text-base">✗</span>' : ''}
-                                    </button>
-                                `;
-                            }).join('')}
-                        </div>
-
-                        ${answered ? `
-                            <div class="mt-4 p-4 rounded-xl text-xs sm:text-sm leading-relaxed ${isCorrect ? 'bg-teal-950/60 border border-teal-800 text-teal-200' : 'bg-rose-950/60 border border-rose-800 text-rose-200'}">
-                                <strong class="block mb-1 text-sm">${isCorrect ? '🎉 תשובה נכונה!' : '💡 הסבר לתשובה הנכונה:'}</strong>
-                                ${q.explanation}
-                            </div>
-                        ` : ''}
-                    </div>
-                `;
-            }).join('');
-
-            updateQuizProgress();
-        }
-
-        function answerQuestion(qId, optionIdx) {
-            userAnswers[qId] = optionIdx;
-            renderQuiz();
-        }
-
-        function updateQuizProgress() {
-            const total = quizQuestions.length;
-            const answeredCount = Object.keys(userAnswers).length;
-            let correctCount = 0;
-
-            quizQuestions.forEach(q => {
-                if (userAnswers[q.id] === q.correct) {
-                    correctCount++;
-                }
-            });
-
-            const scorePercent = Math.round((correctCount / total) * 100);
-            
-            document.getElementById('score-badge').innerText = `${scorePercent}%`;
-            document.getElementById('progress-text').innerText = `נענו ${answeredCount} מתוך ${total} שאלות`;
-            document.getElementById('progress-bar').style.width = `${(answeredCount / total) * 100}%`;
-
-            if (answeredCount === total) {
-                const summary = document.getElementById('quiz-summary');
-                summary.classList.remove('hidden');
-                document.getElementById('summary-score-text').innerText = `הציון שלך: ${scorePercent}% (${correctCount} תשובות נכונות מתוך ${total})`;
-                summary.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        function resetQuiz() {
-            userAnswers = {};
-            document.getElementById('quiz-summary').classList.add('hidden');
-            renderQuiz();
-            showToast('התרגול הופעל מחדש!');
-        }
-
-        // --- 3. NAVIGATION & UI HELPERS ---
-        function switchTab(tabId) {
-            const tabs = ['concepts', 'ptable', 'quiz', 'github'];
-            tabs.forEach(t => {
-                document.getElementById(`sec-${t}`).classList.add('hidden');
-                const btn = document.getElementById(`tab-${t}`);
-                if (btn) {
-                    btn.className = "px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 text-slate-300 hover:text-white hover:bg-slate-700/50";
-                }
-            });
-
-            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
-            const activeBtn = document.getElementById(`tab-${tabId}`);
-            if (activeBtn) {
-                if (tabId === 'github') {
-                    activeBtn.className = "px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 bg-amber-500 text-slate-950 shadow-md";
-                } else {
-                    activeBtn.className = "px-4 py-2 text-sm font-bold rounded-xl transition-all duration-200 bg-teal-500 text-slate-950 shadow-md";
-                }
-            }
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-message').innerText = msg;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
-
-        function copyCurrentCode() {
-            const fullDoc = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-            
-            // Clipboard copy fallbacks
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(fullDoc).then(() => {
-                    showToast('הקוד הועתק בהצלחה ללוח!');
-                }).catch(() => {
-                    fallbackCopy(fullDoc);
-                });
-            } else {
-                fallbackCopy(fullDoc);
-            }
-        }
-
-        function fallbackCopy(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            showToast('הקוד הועתק בהצלחה ללוח!');
-        }
-
-        // --- INIT ON LOAD ---
-        window.onload = function() {
-            renderPeriodicGrid();
-            renderQuiz();
+    function initMolecules() {
+      const btns = document.getElementById('molButtons');
+      moleculesData.forEach((m, idx) => {
+        const b = document.createElement('button');
+        b.className = idx === 0 ? 'action' : 'secondary';
+        b.textContent = m.formula;
+        b.onclick = () => {
+          btns.querySelectorAll('button').forEach(btn => btn.className = 'secondary');
+          b.className = 'action';
+          showMolecule(m);
         };
-    </script>
+        btns.appendChild(b);
+      });
+      showMolecule(moleculesData[0]);
+    }
 
-</body></html>
+    function showMolecule(m) {
+      let visualHtml = '<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;">';
+      for (let r = 0; r < m.repeat; r++) {
+        visualHtml += '<div style="display:flex;align-items:center;gap:4px;padding:6px 10px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;">';
+        m.balls.forEach(ball => {
+          visualHtml += `<span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:${ball.color};color:#0f172a;font-weight:800;font-size:0.8rem;">${ball.label}</span>`;
+        });
+        visualHtml += '</div>';
+      }
+      visualHtml += '</div>';
+
+      document.getElementById('molDisplay').innerHTML = `
+        <div><strong>נוסחה</strong> ${m.formula} | <strong>סיווג</strong> ${m.type}</div>
+        <div style="margin-top:6px;"><strong>תיאור מילולי</strong> ${m.verbal}</div>
+        <div style="margin-top:6px;"><strong>ספירת אטומים</strong> ${m.counts}</div>
+        ${visualHtml}
+      `;
+    }
+
+    // סרטון הרכבת התרכובת
+    const canvas = document.getElementById('reactionCanvas');
+    const ctx = canvas.getContext('2d');
+    let animId = null;
+    let progress = 0;
+    let currentMode = null;
+
+    function drawStaticScene() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '16px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText('סימולציית הרכבת תרכובת - לחצי על כפתור למעלה להפעלה', canvas.width / 2, canvas.height / 2);
+    }
+
+    function drawAtom(x, y, r, color, label) {
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+      ctx.fillStyle = '#0f172a';
+      ctx.font = 'bold 13px system-ui';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, y);
+    }
+
+    function startReaction(mode) {
+      cancelAnimationFrame(animId);
+      currentMode = mode;
+      progress = 0;
+      const cap = document.getElementById('reactionCaption');
+      cap.innerHTML = mode === 'water'
+        ? '<span class="pill">אטומי מימן וחמצן מתקרבים ויוצרים קשר כימי ליצירת מולקולת מים H₂O</span>'
+        : '<span class="pill">נתרן מתכתי וכלור גזי מתרכבים ליצירת תרכובת מוצקה NaCl</span>';
+      stepAnimation();
+    }
+
+    function resetReaction() {
+      cancelAnimationFrame(animId);
+      currentMode = null;
+      progress = 0;
+      drawStaticScene();
+      document.getElementById('reactionCaption').innerHTML = '<span class="pill">ההדמיה אופסה</span>';
+    }
+
+    function stepAnimation() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      progress = Math.min(1, progress + 0.015);
+      const t = progress;
+
+      if (currentMode === 'water') {
+        const ox = 360, oy = 110;
+        const h1x = 120 + (ox - 36 - 120) * t;
+        const h1y = 75 + (oy + 22 - 75) * t;
+        const h2x = 120 + (ox + 36 - 120) * t;
+        const h2y = 155 + (oy + 22 - 155) * t;
+
+        if (t > 0.65) {
+          ctx.strokeStyle = '#e2e8f0';
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.moveTo(ox, oy);
+          ctx.lineTo(h1x, h1y);
+          ctx.moveTo(ox, oy);
+          ctx.lineTo(h2x, h2y);
+          ctx.stroke();
+        }
+
+        drawAtom(ox, oy, 26, '#f87171', 'O');
+        drawAtom(h1x, h1y, 17, '#38bdf8', 'H');
+        drawAtom(h2x, h2y, 17, '#38bdf8', 'H');
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '15px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText(t < 1 ? 'מגיבים בדרך לקשר כימי...' : 'נוצרה מולקולת מים H₂O (תרכובת)', 360, 198);
+      } else if (currentMode === 'salt') {
+        const startNaX = 140, endNaX = 335;
+        const startClX = 560, endClX = 385;
+        const naX = startNaX + (endNaX - startNaX) * t;
+        const clX = startClX + (endClX - startClX) * t;
+
+        if (t > 0.65) {
+          ctx.strokeStyle = '#fde047';
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.moveTo(naX, 110);
+          ctx.lineTo(clX, 110);
+          ctx.stroke();
+        }
+
+        drawAtom(naX, 110, 24, '#facc15', 'Na');
+        drawAtom(clX, 110, 24, '#4ade80', 'Cl');
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '15px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText(t < 1 ? 'התרכבות כימית בין נתרן לכלור...' : 'נוצרה תרכובת נתרן כלורי NaCl (מלח בישול)', 360, 198);
+      }
+
+      if (progress < 1) {
+        animId = requestAnimationFrame(stepAnimation);
+      }
+    }
+
+    // מאגר שאלות בחינה ואתגר מבוסס מחברת בלבד
+    const examBank = [
+      {
+        q: 'מה ההבדל המרכזי בין תרכובת לתערובת לפי המחברת',
+        opts: [
+          'בתרכובת נוצר קשר כימי בין היסודות ומתקבל חומר חדש, ובתערובת החומרים מעורבים ללא קשר כימי',
+          'תערובת היא תמיד חומר טהור ותרכובת היא תמיד גז',
+          'בתרכובת כל האטומים זהים לחלוטין'
+        ],
+        ans: 0,
+        exp: 'בתרכובת נוצר קשר כימי ומתקבלות תכונות חדשות; בתערובת הרכיבים אינם קשורים בקשר כימי ושומרים על תכונותיהם.'
+      },
+      {
+        q: 'איזה מן הבאים הוא יסוד מולקולרי המופיע ברשימת 9 היסודות המולקולריים במחברת',
+        opts: ['H₂O', 'Cl₂', 'NaCl'],
+        ans: 1,
+        exp: 'כלור Cl₂ הוא יסוד מולקולרי (שני אטומי כלור קשורים). H₂O ו-NaCl הן תרכובות.'
+      },
+      {
+        q: 'כיצד נכתב סימול כימי תקין של יסוד המורכב משתי אותיות',
+        opts: [
+          'אות קטנה ואחריה אות גדולה, למשל cA',
+          'אות גדולה ואחריה אות קטנה, למשל Ca',
+          'שתי אותיות גדולות, למשל CA'
+        ],
+        ans: 1,
+        exp: 'סימול כימי מתחיל באות לטינית גדולה ובמידת הצורך ממשיך באות קטנה, כמו Ca לסידן או Na לנתרן.'
+      },
+      {
+        q: 'איזו קבוצה מציגה תכונות אופייניות למתכות',
+        opts: [
+          'מוליכות חשמל וחום, ברק מתכתי וניתנות לריקוע',
+          'אינן מוליכות חשמל כלל ואינן מבריקות',
+          'תמיד גזיות בטמפרטורת החדר'
+        ],
+        ans: 0,
+        exp: 'מתכות מוליכות חשמל וחום, בעלות ברק מתכתי וניתנות לריקוע ולמשיכה.'
+      },
+      {
+        q: 'איזה מן היסודות הבאים שייך למשפחת הגזים האצילים',
+        opts: ['ארגון Ar', 'נתרן Na', 'ברום Br'],
+        ans: 0,
+        exp: 'ארגון Ar הוא גז אציל (יציב ואטומי), נתרן שייך למתכות האלקליות וברום להלוגנים.'
+      },
+      {
+        q: 'מהו התיאור המילולי של 2P₄ לפי סיכומי המחברת',
+        opts: [
+          'שתי מולקולות של זרחן שכל אחת מורכבת מ-4 אטומים',
+          'ארבע מולקולות של זרחן שכל אחת מורכבת מ-2 אטומים',
+          'מולקולה אחת של זרחן ובה 6 אטומים'
+        ],
+        ans: 0,
+        exp: 'המספר 2 משמאל מציין שתי מולקולות, והמספר 4 למטה מציין 4 אטומי זרחן בכל מולקולה.'
+      },
+      {
+        q: 'האם אוויר נחשב לתרכובת או לתערובת',
+        opts: [
+          'תערובת של גזים כגון חנקן וחמצן',
+          'תרכובת אחת של חנקן וחמצן',
+          'יסוד טהור'
+        ],
+        ans: 0,
+        exp: 'אוויר הוא תערובת של גזים (כמו N₂, O₂, CO₂, He, Ar) שאינם קשורים ביניהם בקשר כימי.'
+      }
+    ];
+
+    const challengeBank = [
+      {
+        q: 'בנוסחה 4AlBr₃(s) - כמה אטומי ברום (Br) וכמה אטומי אלומיניום (Al) יש בסך הכול',
+        opts: [
+          '4 אטומי Al ו-12 אטומי Br',
+          '1 אטום Al ו-3 אטומי Br',
+          '4 אטומי Al ו-3 אטומי Br'
+        ],
+        ans: 0,
+        exp: 'יש 4 מולקולות ובכל אחת אטום Al אחד ו-3 אטומי Br, לכן Al = 4 × 1 = 4 ו-Br = 4 × 3 = 12.'
+      },
+      {
+        q: 'מדוע למלח בישול (NaCl) תכונות שונות מנתרן (Na) ומכלור (Cl)',
+        opts: [
+          'כי נוצרה תרכובת חדשה בעלת תכונות חדשות השונות מהיסודות המרכיבים אותה',
+          'כי נתרן וכלור נעלמים לחלוטין בתוך המים',
+          'כי NaCl היא תערובת שבה כל יסוד שומר על תכונותיו המקוריות'
+        ],
+        ans: 0,
+        exp: 'כאשר יסודות יוצרים תרכובת, מתקבל חומר חדש בעל תכונות חדשות השונות מאלה של היסודות המרכיבים אותו.'
+      },
+      {
+        q: 'אם תלמיד כותב את הסימולים cl, co, nA - איזו שגיאה משותפת מופיעה כאן',
+        opts: [
+          'שימוש שגוי באותיות גדולות וקטנות בסימול הכימי של יסודות',
+          'הוספת מצב צבירה בסוגריים ליד כל יסוד',
+          'שימוש במספרים קטנים במקום אותיות'
+        ],
+        ans: 0,
+        exp: 'הסימולים הנכונים הם Cl (כלור), Co (קובלט, להבדיל מ-CO שהוא פחמן חד-חמצני) ו-Na (נתרן).'
+      },
+      {
+        q: 'מה ההבדל בין מולקולה של יסוד (למשל S₈) לבין מולקולה של תרכובת (למשל H₂O)',
+        opts: [
+          'ב-S₈ כל האטומים מאותו סוג (גופרית), וב-H₂O יש אטומים מסוגים שונים (מימן וחמצן)',
+          'ב-S₈ יש קשר כימי וב-H₂O אין קשר כימי',
+          'ב-H₂O יש רק אטום אחד וב-S₈ יש שמונה מולקולות'
+        ],
+        ans: 0,
+        exp: 'יסוד מורכב מסוג אחד של אטומים, ותרכובת מורכבת משני סוגי אטומים או יותר הקשורים ביניהם.'
+      },
+      {
+        q: 'כמה אטומי חמצן (O) וכמה אטומי מימן (H) יש ב-3H₂O',
+        opts: [
+          '6 אטומי מימן ו-3 אטומי חמצן',
+          '2 אטומי מימן ו-1 אטום חמצן',
+          '3 אטומי מימן ו-6 אטומי חמצן'
+        ],
+        ans: 0,
+        exp: 'בכל מולקולת H₂O יש 2 אטומי H ואטום O אחד; ב-3 מולקולות יש H = 3 × 2 = 6 ו-O = 3 × 1 = 3.'
+      }
+    ];
+
+    const activeSets = { exam: [], challenge: [] };
+
+    function pickRandom(arr, count) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy.slice(0, Math.min(count, copy.length));
+    }
+
+    function renderQuestions(mode) {
+      const bank = mode === 'exam' ? examBank : challengeBank;
+      const chosen = pickRandom(bank, 4);
+      activeSets[mode] = chosen;
+      const container = document.getElementById(mode + 'Questions');
+      document.getElementById(mode + 'Score').innerHTML = '';
+      container.innerHTML = '';
+
+      chosen.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'q-item';
+        let optsHtml = '';
+        item.opts.forEach((opt, oIdx) => {
+          optsHtml += `
+            <label class="opt-label">
+              <input type="radio" name="${mode}_q${idx}" value="${oIdx}" />
+              ${opt}
+            </label>
+          `;
+        });
+        div.innerHTML = `
+          <div class="q-title">שאלה ${idx + 1}. ${item.q}</div>
+          ${optsHtml}
+          <div id="${mode}_fb${idx}"></div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function gradeQuestions(mode) {
+      const list = activeSets[mode];
+      let correctCount = 0;
+
+      list.forEach((item, idx) => {
+        const selected = document.querySelector(`input[name="${mode}_q${idx}"]:checked`);
+        const fb = document.getElementById(`${mode}_fb${idx}`);
+        if (!selected) {
+          fb.className = 'feedback bad';
+          fb.textContent = 'לא נבחרה תשובה. תשובה נכונה - ' + item.opts[item.ans] + '. ' + item.exp;
+          return;
+        }
+        const val = Number(selected.value);
+        if (val === item.ans) {
+          correctCount++;
+          fb.className = 'feedback ok';
+          fb.textContent = 'תשובה נכונה. ' + item.exp;
+        } else {
+          fb.className = 'feedback bad';
+          fb.textContent = 'תשובה שגויה. תשובה נכונה - ' + item.opts[item.ans] + '. ' + item.exp;
+        }
+      });
+
+      const score = Math.round((correctCount / list.length) * 100);
+      document.getElementById(mode + 'Score').innerHTML = `
+        <div class="score-banner">ציון סיום - ${score} (${correctCount} מתוך ${list.length} תשובות נכונות)</div>
+      `;
+    }
+
+    initMolecules();
+    drawStaticScene();
+    renderQuestions('exam');
+    renderQuestions('challenge');
+  </script>
+</body>
+</html>
