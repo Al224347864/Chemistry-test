@@ -3,78 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>הכנה למבחן בכימיה - כיתה ט' (לפי סיכומי המחברת)</title>
+  <title>הכנה למבחן בכימיה - כיתה ט'</title>
   <style>
     :root {
-      --bg: #f4f7fb;
+      --bg: #f8fafc;
       --card: #ffffff;
-      --ink: #172554;
+      --ink: #0f172a;
       --muted: #475569;
       --primary: #1d4ed8;
       --primary-soft: #dbeafe;
       --accent: #0f766e;
       --accent-soft: #ccfbf1;
+      --danger: #b91c1c;
+      --danger-soft: #fee2e2;
       --warn: #b45309;
       --warn-soft: #fef3c7;
-      --ok: #15803d;
-      --ok-soft: #dcfce7;
-      --bad: #b91c1c;
-      --bad-soft: #fee2e2;
-      --border: #cbd5e1;
+      --border: #e2e8f0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     header {
       background: linear-gradient(135deg, #1e3a8a, #0f766e);
       color: #fff;
-      padding: 20px 16px;
+      padding: 24px 16px;
       text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     header h1 {
-      margin: 0 0 6px;
-      font-size: 1.6rem;
+      margin: 0 0 8px;
+      font-size: 1.8rem;
     }
 
     header p {
       margin: 0;
       opacity: 0.92;
-      font-size: 0.98rem;
+      font-size: 1rem;
     }
 
     .container {
-      max-width: 1020px;
-      margin: 0 auto;
-      padding: 16px;
+      max-width: 980px;
+      margin: 20px auto;
+      padding: 0 16px 40px;
     }
 
     .tabs {
       display: flex;
-      gap: 8px;
+      gap: 10px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
     }
 
     .tab-btn {
-      flex: 1 1 200px;
-      padding: 12px 14px;
+      flex: 1;
+      min-width: 160px;
+      padding: 12px 16px;
       border: 2px solid var(--border);
       background: var(--card);
       color: var(--ink);
-      border-radius: 10px;
       font-size: 1rem;
       font-weight: 700;
+      border-radius: 10px;
       cursor: pointer;
-      transition: 0.15s;
+      transition: all 0.2s;
     }
 
     .tab-btn.active {
@@ -95,695 +97,1472 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
 
-    h2 {
-      margin: 0 0 12px;
-      font-size: 1.25rem;
+    .card h2 {
+      margin-top: 0;
       color: var(--primary);
-    }
-
-    h3 {
-      margin: 14px 0 8px;
-      font-size: 1.05rem;
-      color: var(--accent);
+      font-size: 1.3rem;
+      border-bottom: 2px solid var(--primary-soft);
+      padding-bottom: 8px;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
+      gap: 16px;
     }
 
-    .pill-list {
+    .concept-box {
+      background: #f1f5f9;
+      border-right: 4px solid var(--accent);
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+
+    .concept-box h3 {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+
+    .sim-area {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px dashed #cbd5e1;
+    }
+
+    .mol-buttons {
+      display: flex;
       gap: 8px;
-      margin-top: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .pill {
-      background: var(--primary-soft);
-      color: var(--primary);
-      padding: 5px 10px;
-      border-radius: 999px;
+    .btn {
+      padding: 9px 16px;
+      border: none;
+      border-radius: 8px;
       font-weight: 600;
-      font-size: 0.9rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.2s;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 0.92rem;
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
     }
 
-    th, td {
-      border: 1px solid var(--border);
-      padding: 8px 10px;
-      text-align: center;
+    .btn-primary:hover {
+      background: #1e40af;
     }
 
-    th {
-      background: #e2e8f0;
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-accent:hover {
+      background: #115e59;
+    }
+
+    .btn-outline {
+      background: #fff;
+      border: 1px solid #cbd5e1;
       color: var(--ink);
     }
 
-    .controls {
+    .btn-outline:hover {
+      background: #f1f5f9;
+    }
+
+    .molecule-stage {
+      width: 100%;
+      max-width: 420px;
+      height: 190px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .builder-atoms {
+      display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 8px;
+      justify-content: center;
+    }
+
+    .atom-chip {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .atom-H { background: #3b82f6; }
+    .atom-O { background: #ef4444; }
+    .atom-C { background: #334155; }
+    .atom-Na { background: #8b5cf6; }
+    .atom-Cl { background: #10b981; }
+
+    .progress-bar-wrap {
+      background: #e2e8f0;
+      border-radius: 999px;
+      height: 12px;
+      overflow: hidden;
       margin: 10px 0;
     }
 
-    button.action {
+    .progress-bar-fill {
       background: var(--accent);
-      color: #fff;
-      border: none;
-      padding: 9px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    .quiz-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--primary-soft);
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 16px;
       font-size: 0.95rem;
     }
 
-    button.secondary {
-      background: #e2e8f0;
-      color: var(--ink);
-      border: none;
-      padding: 9px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-
-    .mol-box {
-      background: #f8fafc;
-      border: 1px dashed #94a3b8;
-      border-radius: 10px;
-      padding: 14px;
-      margin-top: 10px;
-    }
-
-    canvas {
-      display: block;
-      width: 100%;
-      max-width: 720px;
-      height: 220px;
-      margin: 10px auto;
-      background: #0f172a;
-      border-radius: 10px;
-    }
-
-    .q-item {
+    .question-card {
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 14px;
-      margin-bottom: 12px;
-      background: #fafcff;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #fff;
     }
 
     .q-title {
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      font-size: 1.05rem;
     }
 
-    .opt-label {
-      display: block;
-      padding: 6px 10px;
-      margin: 4px 0;
-      border-radius: 7px;
-      border: 1px solid #e2e8f0;
-      cursor: pointer;
-      background: #fff;
-    }
-
-    .opt-label input {
+    .q-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #334155;
       margin-left: 8px;
     }
 
-    .feedback {
-      margin-top: 8px;
-      padding: 10px;
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .option-label:hover {
+      background: #f8fafc;
+    }
+
+    .option-label.correct {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .option-label.wrong {
+      background: var(--danger-soft);
+      border-color: var(--danger);
+    }
+
+    .explanation {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f1f5f9;
       border-radius: 8px;
       font-size: 0.92rem;
-    }
-
-    .feedback.ok {
-      background: var(--ok-soft);
-      color: var(--ok);
-    }
-
-    .feedback.bad {
-      background: var(--bad-soft);
-      color: var(--bad);
+      display: none;
     }
 
     .score-banner {
-      padding: 14px;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 12px;
       background: var(--accent-soft);
-      color: var(--ink);
+      border: 2px solid var(--accent);
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+
+    .score-banner h3 {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .ltr {
+      direction: ltr;
+      unicode-bidi: embed;
       font-weight: 700;
-      margin-top: 12px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>הכנה למבחן בכימיה - כיתה ט'</h1>
-    <p>מבוסס על סיכומי המחברת - יסודות, סימול כימי, מתכות ואל-מתכות, משפחות כימיות, תרכובות ותערובות</p>
-  </header>
 
-  <div class="container">
-    <div class="tabs">
-      <button class="tab-btn active" onclick="openTab('learn', this)">תיקיית למידה</button>
-      <button class="tab-btn" onclick="openTab('exam', this)">תיקיית בחינה</button>
-      <button class="tab-btn" onclick="openTab('challenge', this)">תיקיית אתגר (מיצ"ב)</button>
-    </div>
+<header>
+  <h1>הכנה למבחן בכימיה - כיתה ט'</h1>
+  <p>מבנה האטום, חלקיקים תת-אטומיים, יונים, יסודות, תרכובות ותערובות</p>
+</header>
 
-    <!-- תיקיית למידה -->
-    <section id="learn" class="panel active">
-      <div class="card">
-        <h2>1. יסודות, תרכובות ותערובות</h2>
-        <div class="grid-2">
-          <div>
-            <h3>יסוד</h3>
-            <p>חומר טהור הבנוי מסוג אחד בלבד של אטומים, ולא ניתן לפרק אותו בתהליכים כימיים רגילים לחומרים פשוטים יותר. יסודות יכולים להופיע כאטומים בודדים או כמולקולות.</p>
-          </div>
-          <div>
-            <h3>תרכובת</h3>
-            <p>שני יסודות או יותר היוצרים ביניהם קשר כימי ומתקבל חומר חדש בעל תכונות חדשות השונות מתכונות היסודות המרכיבים אותו. בתוך מולקולה של תרכובת יש אטומים שונים.</p>
-          </div>
-          <div>
-            <h3>תערובת</h3>
-            <p>שני חומרים או יותר המעורבים יחד ואינם יוצרים קשר כימי ביניהם, ולכן כל אחד מן החומרים שומר על תכונותיו (למשל אוויר כתערובת של גזים כמו חנקן, חמצן, פחמן דו-חמצני, הליום וארגון).</p>
-          </div>
-          <div>
-            <h3>9 היסודות המולקולריים מהמחברת</h3>
-            <div class="pill-list">
-              <span class="pill">מימן H₂</span>
-              <span class="pill">חמצן O₂</span>
-              <span class="pill">כלור Cl₂</span>
-              <span class="pill">יוד I₂</span>
-              <span class="pill">פלואור F₂</span>
-              <span class="pill">ברום Br₂</span>
-              <span class="pill">גופרית S₈</span>
-              <span class="pill">זרחן P₄</span>
-              <span class="pill">חנקן N₂</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>2. סימול כימי, מתכות, אל-מתכות ומשפחות כימיות</h2>
-        <p>בסימול כימי של יסוד רושמים אות לטינית גדולה בתחילת הסימול ואות קטנה נוספת במידת הצורך (למשל Ca, Na, Cu, Cl, N, C, H, Mg, Zn, Fe, Au, S, Br). אות גדולה מסמנת סוג חדש של אטום.</p>
-        <div class="grid-2">
-          <div>
-            <h3>מתכות מול אל-מתכות</h3>
-            <p><strong>מתכות</strong> לרוב מוצקות בטמפרטורת החדר (מלבד כספית), מוליכות חשמל וחום, בעלות ברק מתכתי וניתנות לריקוע ולמשיכה (כמו ברזל, זהב, כסף, נחושת, מגנזיום, אבץ, אלומיניום, נתרן).</p>
-            <p><strong>אל-מתכות</strong> מופיעות כמוצקים, נוזלים או גזים בטמפרטורת החדר, לרוב אינן מוליכות חשמל (מלבד גרפיט) ואינן מבריקות (כמו חמצן, חנקן, גופרית, פחמן, כלור, ברום, יוד).</p>
-          </div>
-          <div>
-            <h3>משפחות כימיות</h3>
-            <p><strong>משפחת המתכות האלקליות</strong> מתכות פעילות מאוד (כמו נתרן Na).</p>
-            <p><strong>משפחת ההלוגנים</strong> אל-מתכות מולקולריות פעילות (כמו פלואור, כלור, ברום, יוד).</p>
-            <p><strong>משפחת הגזים האצילים</strong> גזים יציבים ואטומיים (כמו הליום He, ניאון Ne, ארגון Ar, קריפטון Kr, קסנון Xe).</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>3. מציג מולקולות וספירת אטומים (לפי סיכומי המחברת)</h2>
-        <p>בחרי נוסחה מהרשימה כדי לראות תיאור מילולי, ספירת אטומים וייצוג חלקיקי.</p>
-        <div class="controls" id="molButtons"></div>
-        <div class="mol-box" id="molDisplay"></div>
-      </div>
-
-      <div class="card">
-        <h2>4. סרטו הרכבת התרכובת (הדמיה)</h2>
-        <p>צפי כיצד אטומים של יסודות שונים מתחברים ליצירת מולקולות של תרכובת חדשה.</p>
-        <div class="controls">
-          <button class="action" onclick="startReaction('water')">הרכבת מים (H₂ + O₂ → H₂O)</button>
-          <button class="action" onclick="startReaction('salt')">הרכבת מלח בישול (Na + Cl₂ → NaCl)</button>
-          <button class="secondary" onclick="resetReaction()">איפוס סרטון</button>
-        </div>
-        <canvas id="reactionCanvas" width="720" height="220"></canvas>
-        <div id="reactionCaption" class="pill-list">
-          <span class="pill">לחצי על כפתור הרכבה כדי להפעיל את ההדמיה</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- תיקיית בחינה -->
-    <section id="exam" class="panel">
-      <div class="card">
-        <h2>תיקיית בחינה - שאלות מתחלפות</h2>
-        <p>בכל לחיצה על "שאלות חדשות" נבחרות שאלות חדשות מתוך מאגר השאלות המבוסס על המחברת. בסיום לחצי על "בדיקה וקבלת ציון".</p>
-        <div class="controls">
-          <button class="secondary" onclick="renderQuestions('exam')">שאלות חדשות</button>
-          <button class="action" onclick="gradeQuestions('exam')">בדיקה וקבלת ציון</button>
-        </div>
-        <div id="examQuestions"></div>
-        <div id="examScore"></div>
-      </div>
-    </section>
-
-    <!-- תיקיית אתגר -->
-    <section id="challenge" class="panel">
-      <div class="card">
-        <h2>תיקיית אתגר (רמת מיצ"ב) - שאלות מתחלפות</h2>
-        <p>שאלות אתגר לחשיבה מדעית, ספירת אטומים מורכבת, סימול כימי, השוואת תכונות תרכובת ליסודותיה והבחנה בין יסוד, תרכובת ותערובת.</p>
-        <div class="controls">
-          <button class="secondary" onclick="renderQuestions('challenge')">שאלות אתגר חדשות</button>
-          <button class="action" onclick="gradeQuestions('challenge')">בדיקה וקבלת ציון</button>
-        </div>
-        <div id="challengeQuestions"></div>
-        <div id="challengeScore"></div>
-      </div>
-    </section>
+<div class="container">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('learn', event)">תיקיית למידה</button>
+    <button class="tab-btn" onclick="switchTab('exam', event)">תיקיית בחינה (מאגר מתגלגל)</button>
+    <button class="tab-btn" onclick="switchTab('challenge', event)">תיקיית אתגר</button>
   </div>
 
-  <script>
-    function openTab(tabId, btn) {
-      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      btn.classList.add('active');
-      if (tabId === 'learn') drawStaticScene();
+  <!-- תיקיית למידה -->
+  <div id="panel-learn" class="panel active">
+    <div class="card">
+      <h2>מושגי יסוד במבנה האטום</h2>
+      <div class="grid-2">
+        <div class="concept-box">
+          <h3>פרוטונים (p+)</h3>
+          <p>חלקיקים בעלי מטען חשמלי חיובי הנמצאים בגרעין האטום. מספר הפרוטונים הוא <strong>המספר האטומי</strong> והוא קובע את זהות היסוד.</p>
+        </div>
+        <div class="concept-box">
+          <h3>נייטרונים (n0)</h3>
+          <p>חלקיקים חסרי מטען חשמלי (ניטרליים) הנמצאים בגרעין האטום יחד עם הפרוטונים ותורמים למסת האטום.</p>
+        </div>
+        <div class="concept-box">
+          <h3>אלקטרונים (e-)</h3>
+          <p>חלקיקים בעלי מטען חשמלי שלילי הנעים בענן האלקטרונים סביב הגרעין. באטום ניטרלי מספר האלקטרונים שווה למספר הפרוטונים.</p>
+        </div>
+        <div class="concept-box">
+          <h3>מספר מסה ויונים</h3>
+          <p><strong>מספר מסה</strong> הוא סכום הפרוטונים והנייטרונים בגרעין. <strong>יון</strong> נוצר כאשר אטום מוסר אלקטרונים (יון חיובי) או מקבל אלקטרונים (יון שלילי).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>סיווג חומרים</h2>
+      <div class="grid-2">
+        <div class="concept-box">
+          <h3>יסוד</h3>
+          <p>חומר טהור הבנוי מסוג אחד של אטומים בלבד (למשל ברזל <span class="ltr">Fe</span> או חמצן <span class="ltr">O2</span>). לא ניתן לפרקו לחומרים פשוטים יותר.</p>
+        </div>
+        <div class="concept-box">
+          <h3>תרכובת</h3>
+          <p>חומר טהור הבנוי משני סוגי אטומים או יותר הקשורים ביניהם בקשר כימי ביחס קבוע (למשל מים <span class="ltr">H2O</span> או מלח בישול <span class="ltr">NaCl</span>).</p>
+        </div>
+        <div class="concept-box">
+          <h3>תערובת הומוגנית (אחידה)</h3>
+          <p>תערובת של שני חומרים או יותר שלא ניתן להבחין במרכיביה בעין (למשל תמיסת מי מלח או אוויר נקי).</p>
+        </div>
+        <div class="concept-box">
+          <h3>תערובת הטרוגנית</h3>
+          <p>תערובת שבה ניתן להבחין במרכיבים השונים בעין או במיקרוסקופ פשוט (למשל מים ושמן או סלט ירקות).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>מציג מולקולות אינטראקטיבי</h2>
+      <div class="sim-area">
+        <div class="mol-buttons">
+          <button class="btn btn-outline" onclick="showMolecule('H2O')">מים (<span class="ltr">H2O</span>)</button>
+          <button class="btn btn-outline" onclick="showMolecule('CO2')">פחמן דו-חמצני (<span class="ltr">CO2</span>)</button>
+          <button class="btn btn-outline" onclick="showMolecule('CH4')">מתאן (<span class="ltr">CH4</span>)</button>
+          <button class="btn btn-outline" onclick="showMolecule('O2')">חמצן (<span class="ltr">O2</span>)</button>
+        </div>
+        <div class="molecule-stage" id="molStage"></div>
+        <p id="molDesc" style="margin:0; font-weight:600; text-align:center;"></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>הדמיית הרכבת תרכובת</h2>
+      <p>לחצי על האטומים כדי להוסיף אותם לסל הבנייה ובדקי איזו תרכובת או מולקולה נוצרה</p>
+      <div class="sim-area">
+        <div class="builder-atoms">
+          <div class="atom-chip atom-H" onclick="addAtom('H')">H</div>
+          <div class="atom-chip atom-O" onclick="addAtom('O')">O</div>
+          <div class="atom-chip atom-C" onclick="addAtom('C')">C</div>
+          <div class="atom-chip atom-Na" onclick="addAtom('Na')">Na</div>
+          <div class="atom-chip atom-Cl" onclick="addAtom('Cl')">Cl</div>
+        </div>
+        <div id="builtList" style="font-size:1.1rem; font-weight:700; min-height:28px;">הסל ריק</div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-accent" onclick="checkBuilt()">בדוק חומר</button>
+          <button class="btn btn-outline" onclick="clearBuilt()">נקה סל</button>
+        </div>
+        <div id="builtFeedback" style="font-weight:700; color:var(--primary);"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- תיקיית בחינה -->
+  <div id="panel-exam" class="panel">
+    <div class="card">
+      <h2>מבחן מתרגל עם מעבר מלא על המאגר</h2>
+      <p>בכל מבחן מופיעות 10 שאלות מתוך מאגר של 55 שאלות. בסיום המבחן תוכלי להתחיל מבחן חדש שייקח קודם כל שאלות שעדיין לא הופיעו, עד שתעברי על כל המאגר.</p>
+
+      <div class="quiz-meta">
+        <div>התקדמות במאגר השאלות <strong id="poolProgressText">0 מתוך 55 שאלות</strong></div>
+        <button class="btn btn-outline" onclick="resetPoolProgress()">איפוס מאגר והתחלה מחדש</button>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="poolProgressBar"></div>
+      </div>
+
+      <div id="quizContainer"></div>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+        <button class="btn btn-primary" id="submitExamBtn" onclick="gradeExam()">הגש מבחן וקבל ציון</button>
+        <button class="btn btn-accent" id="nextExamBtn" onclick="startNewExam()" style="display:none;">התחל מבחן חדש (שאלות חדשות מהמאגר)</button>
+      </div>
+
+      <div class="score-banner" id="scoreBanner">
+        <h3 id="scoreText"></h3>
+        <p id="scoreSubtext" style="margin:0;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- תיקיית אתגר -->
+  <div id="panel-challenge" class="panel">
+    <div class="card">
+      <h2>שאלות אתגר וחשיבה מעמיקה</h2>
+      <p>שאלות המשלבות הבנה של חלקיקים תת-אטומיים, יונים ותהליכים כימיים ברמת בגרות.</p>
+      <div id="challengeContainer"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const QUESTION_BANK = [
+    {
+      id: 1,
+      topic: "חלקיקי האטום",
+      q: "באטום ניטרלי של נתרן (Na) יש 11 פרוטונים ו-12 נייטרונים. מהו מספר האלקטרונים ומהו מספר המסה שלו?",
+      options: [
+        "11 אלקטרונים ומספר מסה 23",
+        "12 אלקטרונים ומספר מסה 23",
+        "11 אלקטרונים ומספר מסה 12",
+        "23 אלקטרונים ומספר מסה 11"
+      ],
+      answer: 0,
+      exp: "באטום ניטרלי מספר האלקטרונים שווה למספר הפרוטונים (11). מספר המסה הוא סכום הפרוטונים והנייטרונים (11 + 12 = 23)."
+    },
+    {
+      id: 2,
+      topic: "יונים",
+      q: "ליון חיובי בעל מטען 2+ יש 18 אלקטרונים ו-20 נייטרונים. כמה פרוטונים יש בגרעינו?",
+      options: [
+        "18 פרוטונים",
+        "20 פרוטונים",
+        "22 פרוטונים",
+        "16 פרוטונים"
+      ],
+      answer: 1,
+      exp: "מטען 2+ מציין שהאטום מסר 2 אלקטרונים, ולכן מספר הפרוטונים גדול ב-2 ממספר האלקטרונים (18 + 2 = 20)."
+    },
+    {
+      id: 3,
+      topic: "יונים",
+      q: "מה קורה למספר הפרוטונים ולמספר הנייטרונים כאשר אטום כלור ניטרלי הופך ליון כלוריד בעל מטען 1-?",
+      options: [
+        "מספר הפרוטונים קטן ב-1 ומספר הנייטרונים ללא שינוי",
+        "מספר הפרוטונים גדל ב-1 ומספר הנייטרונים גדל ב-1",
+        "גם מספר הפרוטונים וגם מספר הנייטרונים אינם משתנים",
+        "מספר הנייטרונים קטן ב-1 ומספר האלקטרונים ללא שינוי"
+      ],
+      answer: 2,
+      exp: "ביצירת יון משתנה רק מספר האלקטרונים. גרעין האטום הכולל פרוטונים ונייטרונים אינו משתנה."
+    },
+    {
+      id: 4,
+      topic: "חלקיקי האטום",
+      q: "המספר האטומי של יסוד מסוים הוא 17 ומספר המסה שלו הוא 35. כמה נייטרונים יש בגרעין אטום זה?",
+      options: [
+        "17",
+        "18",
+        "35",
+        "52"
+      ],
+      answer: 1,
+      exp: "מספר הנייטרונים שווה להפרש בין מספר המסה למספר האטומי (35 - 17 = 18)."
+    },
+    {
+      id: 5,
+      topic: "איזוטופים",
+      q: "לשני איזוטופים של פחמן, פחמן-12 ופחמן-14, יש:",
+      options: [
+        "אותו מספר נייטרונים ומספר שונה של פרוטונים",
+        "אותו מספר פרוטונים ומספר שונה של נייטרונים",
+        "אותו מספר מסה ומספר שונה של אלקטרונים",
+        "מספר שונה של פרוטונים ומספר שונה של אלקטרונים"
+      ],
+      answer: 1,
+      exp: "איזוטופים הם אטומים של אותו יסוד ולכן יש להם אותו מספר פרוטונים, אך מספר נייטרונים שונה."
+    },
+    {
+      id: 6,
+      topic: "יונים",
+      q: "ליון חמצן בעל מטען 2- יש 8 פרוטונים. כמה אלקטרונים יש ליון זה?",
+      options: [
+        "6 אלקטרונים",
+        "8 אלקטרונים",
+        "10 אלקטרונים",
+        "16 אלקטרונים"
+      ],
+      answer: 2,
+      exp: "מטען 2- פירושו שלליון יש 2 אלקטרונים יותר מפרוטונים (8 + 2 = 10)."
+    },
+    {
+      id: 7,
+      topic: "חלקיקי האטום",
+      q: "איזה חלקיק תת-אטומי קובע את זהותו הכימית של היסוד?",
+      options: [
+        "הנייטרון",
+        "הפרוטון",
+        "האלקטרון",
+        "סכום הנייטרונים והאלקטרונים"
+      ],
+      answer: 1,
+      exp: "מספר הפרוטונים בגרעין (המספר האטומי) הוא תעודת הזהות של היסוד."
+    },
+    {
+      id: 8,
+      topic: "חלקיקי האטום",
+      q: "היכן מרוכזת כמעט כל מסתו של האטום?",
+      options: [
+        "בענן האלקטרונים",
+        "בגרעין האטום",
+        "במרחב הריק שבין הגרעין לאלקטרונים",
+        "המסה מתחלקת באופן שווה בין הגרעין לאלקטרונים"
+      ],
+      answer: 1,
+      exp: "מסת הפרוטון ומסת הנייטרון גדולות פי כ-1840 ממסת האלקטרון, ולכן המסה מרוכזת בגרעין."
+    },
+    {
+      id: 9,
+      topic: "יונים",
+      q: "אטום אלומיניום ניטרלי (מספר אטומי 13) איבד 3 אלקטרונים. מה יהיה סימול היון שהתקבל?",
+      options: [
+        "Al3-",
+        "Al3+",
+        "Al10+",
+        "Al13+"
+      ],
+      answer: 1,
+      exp: "מסירת 3 אלקטרונים שליליים משאירה עודף של 3 פרוטונים חיוביים, ולכן המטען הוא 3+."
+    },
+    {
+      id: 10,
+      topic: "יונים",
+      q: "כאשר אטום ניטרלי מקבל אלקטרון אחד, הוא הופך ל:",
+      options: [
+        "יון חיובי בעל מטען 1+",
+        "יון שלילי בעל מטען 1-",
+        "איזוטופ חדש של אותו יסוד",
+        "יסוד חדש בטבלה המחזורית"
+      ],
+      answer: 1,
+      exp: "קבלת אלקטרון מוסיפה מטען שלילי אחד לאטום הניטרלי ויוצרת יון חד-שלילי."
+    },
+    {
+      id: 11,
+      topic: "חלקיקי האטום",
+      q: "בחלקיק מסוים יש 15 פרוטונים, 16 נייטרונים ו-18 אלקטרונים. מהו החלקיק?",
+      options: [
+        "אטום ניטרלי שמספר המסה שלו 31",
+        "יון שלילי בעל מטען 3- ומספר מסה 31",
+        "יון חיובי בעל מטען 3+ ומספר מסה 33",
+        "יון שלילי בעל מטען 2- ומספר מסה 34"
+      ],
+      answer: 1,
+      exp: "יש 3 אלקטרונים יותר מפרוטונים (18 לעומת 15) ולכן המטען הוא 3-. מספר המסה הוא 15 + 16 = 31."
+    },
+    {
+      id: 12,
+      topic: "חלקיקי האטום",
+      q: "מה משותף לאטום ניאון ניטרלי (10 פרוטונים) וליון נתרן חיובי Na+ (11 פרוטונים)?",
+      options: [
+        "מספר הפרוטונים",
+        "מספר האלקטרונים",
+        "המטען החשמלי הכולל",
+        "המיקום בטבלה המחזורית"
+      ],
+      answer: 1,
+      exp: "לשניהם יש 10 אלקטרונים (בניאון הניטרלי יש 10, וביון נתרן 11 פחות 1 = 10)."
+    },
+    {
+      id: 13,
+      topic: "יסודות ותרכובות",
+      q: "איזה מבין הסימולים הבאים מייצג תרכובת?",
+      options: [
+        "O3",
+        "S8",
+        "CO",
+        "Co"
+      ],
+      answer: 2,
+      exp: "CO מורכב משני יסודות שונים, פחמן (C) וחמצן (O), ולכן זוהי תרכובת. Co הוא היסוד קובלט."
+    },
+    {
+      id: 14,
+      topic: "יסודות ותרכובות",
+      q: "מה ההבדל העיקרי בין תרכובת לבין תערובת?",
+      options: [
+        "לתרכובת יש הרכב קבוע ותכונות שונות ממרכיביה, בעוד לתערובת הרכב משתנה",
+        "תרכובת תמיד נמצאת במצב מוצק ותערובת תמיד במצב נוזל",
+        "תערובת אי אפשר להפריד ותרכובת קל להפריד בסינון",
+        "תרכובת בנויה מסוג אטומים אחד ותערובת משני סוגים"
+      ],
+      answer: 0,
+      exp: "בתרכובת האטומים קשורים כימית ביחס קבוע והחומר החדש מקבל תכונות חדשות לגמרי."
+    },
+    {
+      id: 15,
+      topic: "תערובות",
+      q: "איזו שיטת הפרדה מתאימה ביותר להפרדת מלח מומס מתוך תמיסת מי מלח?",
+      options: [
+        "סינון דרך נייר סינון",
+        "אידוי או זיקוק",
+        "הפרדה בעזרת מגנט",
+        "שפיכה זהירה (דקנטציה)"
+      ],
+      answer: 1,
+      exp: "מלח מומס עובר דרך נייר סינון, ולכן יש לאדות את המים כדי לקבל את המלח המוצק."
+    },
+    {
+      id: 16,
+      topic: "טבלה מחזורית",
+      q: "היסודות באותו טור (משפחה כימית) בטבלה המחזורית מאופיינים ב:",
+      options: [
+        "אותו מספר פרוטונים בגרעין",
+        "תכונות כימיות דומות ומספר זהה של אלקטרוני ערכיות",
+        "אותו מספר מסה בדיוק",
+        "אותו מצב צבירה בטמפרטורת החדר"
+      ],
+      answer: 1,
+      exp: "יסודות באותו טור חולקים מספר אלקטרונים זהה ברמה החיצונית ולכן התנהגותם הכימית דומה."
+    },
+    {
+      id: 17,
+      topic: "טבלה מחזורית",
+      q: "איזו משפחה כימית כוללת יסודות יציבים שאינם נוטים ליצור תרכובות כימיות?",
+      options: [
+        "הלוגנים (טור 17)",
+        "מתכות אלקליות (טור 1)",
+        "גזים אצילים (טור 18)",
+        "מתכות מעבר"
+      ],
+      answer: 2,
+      exp: "לגזים האצילים רמת אנרגיה חיצונית מלאה באלקטרונים ולכן הם יציבים ואדישים כימית."
+    },
+    {
+      id: 18,
+      topic: "טבלה מחזורית",
+      q: "מתכות אלקליות (כגון נתרן ואשלגן) נוטות ליצור בתגובה כימית:",
+      options: [
+        "יונים חיוביים בעלי מטען 1+",
+        "יונים שליליים בעלי מטען 1-",
+        "יונים חיוביים בעלי מטען 2+",
+        "אינן יוצרות יונים כלל"
+      ],
+      answer: 0,
+      exp: "למתכות אלקליות יש אלקטרון ערכיות אחד שאותו הן מוסרות בקלות ליצירת יון 1+."
+    },
+    {
+      id: 19,
+      topic: "מבנה החומר",
+      q: "במולקולת אמוניה שנוסחתה NH3 יש בסך הכל:",
+      options: [
+        "אטום חנקן אחד ושלושה אטומי מימן",
+        "שלושה אטומי חנקן ואטום מימן אחד",
+        "ארבעה יסודות שונים",
+        "שתי מולקולות נפרדות"
+      ],
+      answer: 0,
+      exp: "הסימול NH3 מציין אטום N אחד הקשור ל-3 אטומי H."
+    },
+    {
+      id: 20,
+      topic: "מבנה החומר",
+      q: "מה מסמל הרישום 3H2O?",
+      options: [
+        "מולקולה אחת המורכבת מ-6 אטומי מימן ו-3 אטומי חמצן",
+        "3 מולקולות נפרדות של מים",
+        "תערובת של 3 גרם מימן וחמצן",
+        "יון מים בעל מטען 3+"
+      ],
+      answer: 1,
+      exp: "מקדם לפני נוסחה מולקולרית מציין את מספר המולקולות הנפרדות של החומר."
+    },
+    {
+      id: 21,
+      topic: "חלקיקי האטום",
+      q: "לאטום סידן ניטרלי מספר אטומי 20 ומספר מסה 40. כמה אלקטרונים יש ביון Ca2+?",
+      options: [
+        "20",
+        "18",
+        "22",
+        "40"
+      ],
+      answer: 1,
+      exp: "אטום סידן ניטרלי מכיל 20 אלקטרונים. ביון 2+ נמסרו 2 אלקטרונים ולכן נותרו 18 אלקטרונים."
+    },
+    {
+      id: 22,
+      topic: "חלקיקי האטום",
+      q: "באטום ניטרלי מסוים יש 26 אלקטרונים ו-30 נייטרונים. מהו המספר האטומי של היסוד?",
+      options: [
+        "30",
+        "56",
+        "26",
+        "4"
+      ],
+      answer: 2,
+      exp: "באטום ניטרלי מספר הפרוטונים שווה למספר האלקטרונים (26), וזהו המספר האטומי."
+    },
+    {
+      id: 23,
+      topic: "חלקיקי האטום",
+      q: "מהו המטען החשמלי של גרעין האטום?",
+      options: [
+        "שלילי, בגלל האלקטרונים",
+        "חיובי, בגלל הפרוטונים",
+        "ניטרלי, כי הנייטרונים מבטלים את הפרוטונים",
+        "משתנה בהתאם לטמפרטורה"
+      ],
+      answer: 1,
+      exp: "בגרעין נמצאים פרוטונים חיוביים ונייטרונים חסרי מטען, ולכן מטען הגרעין תמיד חיובי."
+    },
+    {
+      id: 24,
+      topic: "חלקיקי האטום",
+      q: "מדוע האטום השלם הוא חלקיק ניטרלי מבחינה חשמלית?",
+      options: [
+        "כי אין בו חלקיקים טעונים כלל",
+        "כי מספר הפרוטונים החיוביים שווה למספר האלקטרונים השליליים",
+        "כי מספר הנייטרונים שווה למספר האלקטרונים",
+        "כי האלקטרונים נמצאים בתוך הגרעין"
+      ],
+      answer: 1,
+      exp: "המטען החיובי של הפרוטונים מאזן בדיוק את המטען השלילי של האלקטרונים."
+    },
+    {
+      id: 25,
+      topic: "יונים",
+      q: "איזה מבין החלקיקים הבאים הוא יון שלילי (אניון)?",
+      options: [
+        "חלקיק עם 12 פרוטונים ו-10 אלקטרונים",
+        "חלקיק עם 9 פרוטונים ו-10 אלקטרונים",
+        "חלקיק עם 10 פרוטונים ו-10 אלקטרונים",
+        "חלקיק עם 19 פרוטונים ו-18 אלקטרונים"
+      ],
+      answer: 1,
+      exp: "כאשר מספר האלקטרונים גדול ממספר הפרוטונים (10 לעומת 9), לחלקיק עודף מטען שלילי."
+    },
+    {
+      id: 26,
+      topic: "תגובות כימיות",
+      q: "במהלך תגובה כימית במערכת סגורה, המסה הכוללת של החומרים:",
+      options: [
+        "גדלה כי נוצרים קשרים חדשים",
+        "קטנה כי חלק מהאטומים נעלמים",
+        "נשארת קבועה לפי חוק שימור המסה",
+        "תלויה במצב הצבירה של התוצרים"
+      ],
+      answer: 2,
+      exp: "בתגובה כימית האטומים רק מסתדרים מחדש; מספרם וסוגם אינם משתנים ולכן המסה נשמרת."
+    },
+    {
+      id: 27,
+      topic: "תגובות כימיות",
+      q: "איזו תופעה מעידה בדרך כלל על התרחשות שינוי כימי ולא רק שינוי פיזיקלי?",
+      options: [
+        "התכת קרח למים נוזליים",
+        "המסת סוכר בכוס תה",
+        "פליטת גז ושינוי צבע קבוע בעת ערבוב שני נוזלים",
+        "טחינת גבישי מלח לאבקה דקה"
+      ],
+      answer: 2,
+      exp: "התכה, המסה וטחינה הם שינויים פיזיקליים, בעוד יצירת חומר חדש (גז או צבע חדש) מעידה על תגובה כימית."
+    },
+    {
+      id: 28,
+      topic: "תערובות",
+      q: "אוויר נקי (המכיל בעיקר חנקן וחמצן) מוגדר מבחינה כימית כ:",
+      options: [
+        "יסוד גזי",
+        "תרכובת אחידה",
+        "תערובת הומוגנית של גזים",
+        "תערובת הטרוגנית"
+      ],
+      answer: 2,
+      exp: "האוויר מורכב ממספר גזים שאינם קשורים כימית זה לזה ומעורבבים באחידות."
+    },
+    {
+      id: 29,
+      topic: "תערובות",
+      q: "כיצד ניתן להפריד ביעילות תערובת של אבקת ברזל ואבקת גופרית?",
+      options: [
+        "בעזרת מגנט",
+        "בעזרת נייר סינון",
+        "על ידי הרתחה",
+        "בעזרת משפך מפריד"
+      ],
+      answer: 0,
+      exp: "ברזל נמשך למגנט וגופרית אינה נמשכת, ולכן הפרדה מגנטית תפריד ביניהם מיד."
+    },
+    {
+      id: 30,
+      topic: "חלקיקי האטום",
+      q: "כמה פרוטונים, נייטרונים ואלקטרונים יש באטום הליום ניטרלי שמספרו האטומי 2 ומספר המסה שלו 4?",
+      options: [
+        "2 פרוטונים, 2 נייטרונים, 2 אלקטרונים",
+        "2 פרוטונים, 4 נייטרונים, 2 אלקטרונים",
+        "4 פרוטונים, 2 נייטרונים, 4 אלקטרונים",
+        "2 פרוטונים, 2 נייטרונים, 4 אלקטרונים"
+      ],
+      answer: 0,
+      exp: "מספר אטומי 2 פירושו 2 פרוטונים ובאטום ניטרלי גם 2 אלקטרונים. מספר הנייטרונים הוא 4 - 2 = 2."
+    },
+    {
+      id: 31,
+      topic: "חלקיקי האטום",
+      q: "היערכות האלקטרונים באטום מגנזיום (מספר אטומי 12) היא 2, 8, 2. כמה אלקטרונים נמצאים ברמת האנרגיה החיצונית?",
+      options: [
+        "12",
+        "8",
+        "2",
+        "10"
+      ],
+      answer: 2,
+      exp: "המספר האחרון בהיערכות האלקטרונים (2) מציין את מספר האלקטרונים ברמה החיצונית ביותר."
+    },
+    {
+      id: 32,
+      topic: "חלקיקי האטום",
+      q: "מה תהיה היערכות האלקטרונים של יון מגנזיום Mg2+ (מספר אטומי 12)?",
+      options: [
+        "2, 8, 2",
+        "2, 8",
+        "2, 8, 4",
+        "2, 6"
+      ],
+      answer: 1,
+      exp: "אטום מגנזיום מוסר את 2 האלקטרונים שברמתו החיצונית ונותר עם 10 אלקטרונים בהיערכות 2, 8."
+    },
+    {
+      id: 33,
+      topic: "טבלה מחזורית",
+      q: "הלוגנים (כגון פלואור, כלור וברום) נמצאים בטור 17 בטבלה המחזורית. איזה יון הם נוטים ליצור?",
+      options: [
+        "יון 1+",
+        "יון 1-",
+        "יון 2+",
+        "יון 2-"
+      ],
+      answer: 1,
+      exp: "להלוגנים 7 אלקטרוני ערכיות והם נוטים לקבל אלקטרון אחד להשלמת רמה מלאה, ליצירת יון 1-."
+    },
+    {
+      id: 34,
+      topic: "הולכה חשמלית",
+      q: "מדוע תמיסה מימית של מלח בישול (NaCl) מוליכה זרם חשמלי?",
+      options: [
+        "כי במים יש אלקטרונים חופשיים שנעים",
+        "כי בהמסה במים משתחררים יונים חיוביים ושליליים הניידים בתמיסה",
+        "כי המלח הופך למתכת נוזלית",
+        "כי מולקולות המים מתפרקות למימן וחמצן"
+      ],
+      answer: 1,
+      exp: "הולכה חשמלית בתמיסה מתאפשרת בזכות תנועה חופשית של יונים טעונים."
+    },
+    {
+      id: 35,
+      topic: "הולכה חשמלית",
+      q: "איזה מבין החומרים הבאים מוליך זרם חשמלי במצב צבירה מוצק?",
+      options: [
+        "גופרית (S8)",
+        "מלח בישול מוצק (NaCl)",
+        "נחושת (Cu)",
+        "סוכר (C12H22O11)"
+      ],
+      answer: 2,
+      exp: "מתכות כמו נחושת מכילות אלקטרונים ניידים בסריג המתכתי ולכן מוליכות חשמל במצב מוצק."
+    },
+    {
+      id: 36,
+      topic: "חומצות ובסיסים",
+      q: "תמיסה מימית שנבדקה בנייר לקמוס והראתה ערך pH של 3 היא תמיסה:",
+      options: [
+        "בסיסית חזקה",
+        "ניטרלית",
+        "חומצית",
+        "מזוקקת"
+      ],
+      answer: 2,
+      exp: "ערכי pH הנמוכים מ-7 מציינים סביבה חומצית."
+    },
+    {
+      id: 37,
+      topic: "חומצות ובסיסים",
+      q: "מהו ערך ה-pH של מים טהורים בטמפרטורת החדר?",
+      options: [
+        "0",
+        "7",
+        "14",
+        "1"
+      ],
+      answer: 1,
+      exp: "מים טהורים הם ניטרליים וערך ה-pH שלהם הוא 7."
+    },
+    {
+      id: 38,
+      topic: "מצבי צבירה",
+      q: "מה קורה לחלקיקי החומר בעת חימום מוצק והפיכתו לנוזל (התכה)?",
+      options: [
+        "החלקיקים עצמם מתנפחים וגדלים",
+        "מהירות תנועת החלקיקים גדלה והם מתנתקים ממקומם הקבוע",
+        "נוצרים אטומים מסוג חדש",
+        "מספר החלקיקים בכלי מוכפל"
+      ],
+      answer: 1,
+      exp: "חימום מגדיל את האנרגיה הקינטית של החלקיקים ומאפשר להם לנוע ולהחליק זה על גבי זה."
+    },
+    {
+      id: 39,
+      topic: "חלקיקי האטום",
+      q: "ליסוד X מספר מסה 27 ו-14 נייטרונים בגרעין. כמה אלקטרונים יש באטום ניטרלי של יסוד X?",
+      options: [
+        "14",
+        "27",
+        "13",
+        "41"
+      ],
+      answer: 2,
+      exp: "מספר הפרוטונים הוא 27 - 14 = 13. באטום ניטרלי מספר האלקטרונים שווה למספר הפרוטונים (13)."
+    },
+    {
+      id: 40,
+      topic: "חלקיקי האטום",
+      q: "בחלקיק Z יש 16 פרוטונים, 16 נייטרונים ו-18 אלקטרונים. מהו סימולו הנכון של החלקיק (גופרית, S)?",
+      options: [
+        "S",
+        "S2+",
+        "S2-",
+        "S18-"
+      ],
+      answer: 2,
+      exp: "יש 2 אלקטרונים יותר מפרוטונים (18 לעומת 16) ולכן מטען היון הוא 2-."
+    },
+    {
+      id: 41,
+      topic: "חלקיקי האטום",
+      q: "בחלקיק יש 19 פרוטונים, 20 נייטרונים ו-18 אלקטרונים. מהו מטענו החשמלי ומהו מספר המסה שלו?",
+      options: [
+        "מטען 1+ ומספר מסה 39",
+        "מטען 1- ומספר מסה 39",
+        "מטען 1+ ומספר מסה 37",
+        "מטען 2+ ומספר מסה 39"
+      ],
+      answer: 0,
+      exp: "יש פרוטון אחד יותר מאלקטרונים (19 לעומת 18), ולכן המטען הוא 1+, ומספר המסה הוא 19 + 20 = 39."
+    },
+    {
+      id: 42,
+      topic: "חלקיקי האטום",
+      q: "אטום ניטרלי מסוים מכיל 35 נייטרונים ומספר המסה שלו הוא 80. כמה אלקטרונים יש באטום הניטרלי?",
+      options: [
+        "35",
+        "45",
+        "80",
+        "115"
+      ],
+      answer: 1,
+      exp: "מספר הפרוטונים הוא 80 - 35 = 45, ובאטום ניטרלי מספר האלקטרונים שווה למספר הפרוטונים."
+    },
+    {
+      id: 43,
+      topic: "יונים",
+      q: "ליון בעל מטען 1- יש 18 אלקטרונים ו-19 נייטרונים. מהו מספר הפרוטונים ומהו מספר המסה של היון?",
+      options: [
+        "17 פרוטונים ומספר מסה 36",
+        "19 פרוטונים ומספר מסה 37",
+        "18 פרוטונים ומספר מסה 37",
+        "17 פרוטונים ומספר מסה 35"
+      ],
+      answer: 0,
+      exp: "מטען 1- פירושו אלקטרון אחד יותר מפרוטונים, ולכן יש 18 - 1 = 17 פרוטונים. מספר המסה הוא 17 + 19 = 36."
+    },
+    {
+      id: 44,
+      topic: "חלקיקי האטום",
+      q: "איזה מבין הצמדים הבאים מכיל מספר אלקטרונים זהה לחלוטין?",
+      options: [
+        "יון מגנזיום Mg2+ (מספר אטומי 12) ואטום ניאון Ne (מספר אטומי 10)",
+        "אטום מגנזיום ניטרלי (מספר אטומי 12) ויון Mg2+",
+        "אטום כלור ניטרלי (מספר אטומי 17) ויון כלוריד Cl-",
+        "אטום פחמן ניטרלי (מספר אטומי 6) ואטום חמצן ניטרלי (מספר אטומי 8)"
+      ],
+      answer: 0,
+      exp: "גם ב-Mg2+ (12 פחות 2) וגם באטום ניאון ניטרלי (10) יש בדיוק 10 אלקטרונים."
+    },
+    {
+      id: 45,
+      topic: "יונים",
+      q: "כמה פרוטונים, נייטרונים ואלקטרונים יש ביון האלומיניום Al3+ אם נתון שמספרו האטומי 13 ומספר המסה שלו 27?",
+      options: [
+        "13 פרוטונים, 14 נייטרונים, 10 אלקטרונים",
+        "13 פרוטונים, 14 נייטרונים, 13 אלקטרונים",
+        "10 פרוטונים, 14 נייטרונים, 13 אלקטרונים",
+        "13 פרוטונים, 27 נייטרונים, 10 אלקטרונים"
+      ],
+      answer: 0,
+      exp: "מספר הפרוטונים הוא 13, מספר הנייטרונים הוא 27 - 13 = 14, ומספר האלקטרונים ביון 3+ הוא 13 - 3 = 10."
+    },
+    {
+      id: 46,
+      topic: "חלקיקי האטום",
+      q: "מהו המספר המינימלי של פרוטונים שיכול להיות באטום כלשהו?",
+      options: [
+        "0 פרוטונים",
+        "1 פרוטון",
+        "2 פרוטונים",
+        "תלוי במספר הנייטרונים"
+      ],
+      answer: 1,
+      exp: "האטום הפשוט ביותר הוא מימן, ובו יש פרוטון אחד בגרעין."
+    },
+    {
+      id: 47,
+      topic: "חלקיקי האטום",
+      q: "לחלקיק מסוים יש 8 פרוטונים, 9 נייטרונים ו-8 אלקטרונים. איזו קביעה נכונה לגביו?",
+      options: [
+        "זהו יון חיובי של חמצן",
+        "זהו יון שלילי של חמצן",
+        "זהו אטום ניטרלי של חמצן",
+        "זהו אטום ניטרלי של פלואור"
+      ],
+      answer: 2,
+      exp: "מספר הפרוטונים (8) שווה למספר האלקטרונים (8), ולכן החלקיק ניטרלי והיסוד הוא חמצן."
+    },
+    {
+      id: 48,
+      topic: "חלקיקי האטום",
+      q: "אם מוסיפים נייטרון אחד לגרעין של אטום כלשהו, מה משתנה בוודאות?",
+      options: [
+        "זהות היסוד",
+        "המטען החשמלי של החלקיק",
+        "מספר המסה של האטום",
+        "מספר האלקטרונים באטום הניטרלי"
+      ],
+      answer: 2,
+      exp: "הוספת נייטרון מגדילה את מספר המסה ב-1 מבלי לשנות את מספר הפרוטונים או את המטען."
+    },
+    {
+      id: 49,
+      topic: "יונים",
+      q: "באטום ניטרלי של זרחן יש 15 פרוטונים ו-16 נייטרונים. מה יקרה אם האטום יקבל 3 אלקטרונים?",
+      options: [
+        "יתקבל יון P3- עם 18 אלקטרונים ו-15 פרוטונים",
+        "יתקבל יון P3+ עם 18 אלקטרונים ו-15 פרוטונים",
+        "יתקבל יון P3- עם 15 אלקטרונים ו-18 פרוטונים",
+        "יתקבל יון P3- עם 18 אלקטרונים ו-19 נייטרונים"
+      ],
+      answer: 0,
+      exp: "קבלת 3 אלקטרונים מביאה ל-18 אלקטרונים ומטען 3-, בעוד מספר הפרוטונים (15) והנייטרונים (16) נשאר קבוע."
+    },
+    {
+      id: 50,
+      topic: "יונים",
+      q: "נתון חלקיק בעל מטען 2+ ו-20 נייטרונים. אם ידוע שמספר האלקטרונים שלו הוא 18, מהו מספר המסה שלו?",
+      options: [
+        "38",
+        "40",
+        "42",
+        "20"
+      ],
+      answer: 1,
+      exp: "מספר הפרוטונים הוא 18 + 2 = 20, ומספר המסה הוא 20 + 20 = 40."
+    },
+    {
+      id: 51,
+      topic: "חלקיקי האטום",
+      q: "איזה מבין התיאורים הבאים מתאים לאטום של יסוד שמספרו האטומי 6 ומספר המסה שלו 13?",
+      options: [
+        "6 פרוטונים, 6 נייטרונים, 7 אלקטרונים",
+        "6 פרוטונים, 7 נייטרונים, 6 אלקטרונים",
+        "7 פרוטונים, 6 נייטרונים, 7 אלקטרונים",
+        "13 פרוטונים, 6 נייטרונים, 13 אלקטרונים"
+      ],
+      answer: 1,
+      exp: "יש 6 פרוטונים, 6 אלקטרונים (באטום ניטרלי) ו-13 - 6 = 7 נייטרונים."
+    },
+    {
+      id: 52,
+      topic: "חלקיקי האטום",
+      q: "מהו ההבדל העיקרי בין פרוטון לבין אלקטרון?",
+      options: [
+        "לפרוטון מטען שלילי ולאלקטרון מטען חיובי",
+        "לפרוטון מטען חיובי ומסה גדולה בהרבה משל אלקטרון",
+        "לאלקטרון מסה גדולה יותר ולכן הוא נמצא בגרעין",
+        "לפרוטון אין מטען חשמלי ולאלקטרון יש מטען חיובי"
+      ],
+      answer: 1,
+      exp: "הפרוטון חיובי וכבד בהרבה מהאלקטרון השלילי והקל."
+    },
+    {
+      id: 53,
+      topic: "יונים",
+      q: "חלקיק מסוים מכיל 12 פרוטונים ו-10 אלקטרונים. מהו המטען שלו?",
+      options: [
+        "2-",
+        "2+",
+        "10+",
+        "0"
+      ],
+      answer: 1,
+      exp: "יש 2 פרוטונים חיוביים יותר מאלקטרונים שליליים, ולכן המטען הוא 2+."
+    },
+    {
+      id: 54,
+      topic: "חלקיקי האטום",
+      q: "איזה מבין החלקיקים הבאים הוא אטום ניטרלי ולא יון?",
+      options: [
+        "11 פרוטונים, 12 נייטרונים, 10 אלקטרונים",
+        "17 פרוטונים, 18 נייטרונים, 18 אלקטרונים",
+        "7 פרוטונים, 7 נייטרונים, 7 אלקטרונים",
+        "8 פרוטונים, 8 נייטרונים, 10 אלקטרונים"
+      ],
+      answer: 2,
+      exp: "רק באפשרות ג מספר הפרוטונים (7) שווה למספר האלקטרונים (7)."
+    },
+    {
+      id: 55,
+      topic: "חלקיקי האטום",
+      q: "באטום ניטרלי של ברום יש 35 פרוטונים ו-44 נייטרונים. מהו מספר האלקטרונים שלו ומהו מספר המסה שלו?",
+      options: [
+        "35 אלקטרונים ומספר מסה 79",
+        "44 אלקטרונים ומספר מסה 79",
+        "35 אלקטרונים ומספר מסה 44",
+        "79 אלקטרונים ומספר מסה 35"
+      ],
+      answer: 0,
+      exp: "באטום ניטרלי מספר האלקטרונים שווה למספר הפרוטונים (35), ומספר המסה הוא 35 + 44 = 79."
+    }
+  ];
+
+  const CHALLENGE_QUESTIONS = [
+    {
+      q: "נתונים שני חלקיקים: חלקיק א' מכיל 17 פרוטונים, 18 נייטרונים ו-18 אלקטרונים. חלקיק ב' מכיל 17 פרוטונים, 20 נייטרונים ו-17 אלקטרונים. איזו קביעה נכונה?",
+      options: [
+        "שני החלקיקים שייכים לאותו יסוד; חלקיק א' הוא יון שלילי וחלקיק ב' הוא אטום ניטרלי",
+        "מדובר בשני יסודות שונים בעלי מספר מסה זהה",
+        "חלקיק א' הוא יון חיובי וחלקיק ב' הוא יון שלילי",
+        "לשני החלקיקים אותו מספר נייטרונים ולכן הם איזוטופים זהים"
+      ],
+      answer: 0,
+      exp: "לשניהם 17 פרוטונים ולכן שניהם שייכים ליסוד כלור. בחלקיק א' יש 18 אלקטרונים (עודף של אלקטרון אחד, יון 1-) ובחלקיק ב' מספר הפרוטונים שווה למספר האלקטרונים."
+    },
+    {
+      q: "אטום של יסוד מתכתי מסוים מסר 2 אלקטרונים והפך ליון בעל 10 אלקטרונים ומספר מסה 24. כמה נייטרונים יש בגרעין האטום?",
+      options: [
+        "10 נייטרונים",
+        "12 נייטרונים",
+        "14 נייטרונים",
+        "24 נייטרונים"
+      ],
+      answer: 1,
+      exp: "אם ליון 2+ יש 10 אלקטרונים, באטום הניטרלי היו 12 אלקטרונים ולכן יש בו 12 פרוטונים. מספר הנייטרונים הוא 24 - 12 = 12."
+    },
+    {
+      q: "תלמיד ערבב אבקת ברזל עם אבקת גופרית. בשלב ראשון ניתן היה להפריד ביניהם בעזרת מגנט. לאחר מכן חימם התלמיד את התערובת עד שהתרחשה תגובה ונוצר מוצק שחור שאינו נמשך למגנט. מה קרה?",
+      options: [
+        "הברזל נמס והתאדה לאוויר",
+        "נוצרה תרכובת חדשה (ברזל גופרי) שתכונותיה שונות מתכונות היסודות המרכיבים אותה",
+        "המגנט איבד את כוחו בגלל החום",
+        "נוצרה תערובת הומוגנית נוזלית"
+      ],
+      answer: 1,
+      exp: "החימום גרם לתגובה כימית בין היסודות וליצירת תרכובת חדשה בעלת תכונות כימיות ופיזיקליות חדשות."
+    }
+  ];
+
+  const EXAM_SIZE = 10;
+  const STORAGE_KEY = "chem_seen_ids_v3";
+  let currentExamQuestions = [];
+  let examGraded = false;
+
+  function switchTab(tab, ev) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    if (ev && ev.target) {
+      ev.target.classList.add('active');
+    }
+    document.getElementById('panel-' + tab).classList.add('active');
+  }
+
+  /* מציג מולקולות */
+  function showMolecule(type) {
+    const stage = document.getElementById('molStage');
+    const desc = document.getElementById('molDesc');
+    if (type === 'H2O') {
+      stage.innerHTML = `
+        <svg width="260" height="160" viewBox="0 0 260 160">
+          <line x1="130" y1="60" x2="75" y2="115" stroke="#64748b" stroke-width="6"/>
+          <line x1="130" y1="60" x2="185" y2="115" stroke="#64748b" stroke-width="6"/>
+          <circle cx="130" cy="60" r="28" fill="#ef4444"/>
+          <text x="130" y="66" text-anchor="middle" fill="#fff" font-weight="bold" font-size="18">O</text>
+          <circle cx="75" cy="115" r="18" fill="#3b82f6"/>
+          <text x="75" y="121" text-anchor="middle" fill="#fff" font-weight="bold" font-size="15">H</text>
+          <circle cx="185" cy="115" r="18" fill="#3b82f6"/>
+          <text x="185" y="121" text-anchor="middle" fill="#fff" font-weight="bold" font-size="15">H</text>
+        </svg>`;
+      desc.textContent = "מולקולת מים (H2O) — תרכובת הבנויה מאטום חמצן אחד ושני אטומי מימן.";
+    } else if (type === 'CO2') {
+      stage.innerHTML = `
+        <svg width="280" height="160" viewBox="0 0 280 160">
+          <line x1="70" y1="75" x2="140" y2="75" stroke="#64748b" stroke-width="5"/>
+          <line x1="70" y1="85" x2="140" y2="85" stroke="#64748b" stroke-width="5"/>
+          <line x1="140" y1="75" x2="210" y2="75" stroke="#64748b" stroke-width="5"/>
+          <line x1="140" y1="85" x2="210" y2="85" stroke="#64748b" stroke-width="5"/>
+          <circle cx="140" cy="80" r="26" fill="#334155"/>
+          <text x="140" y="86" text-anchor="middle" fill="#fff" font-weight="bold" font-size="18">C</text>
+          <circle cx="70" cy="80" r="24" fill="#ef4444"/>
+          <text x="70" y="86" text-anchor="middle" fill="#fff" font-weight="bold" font-size="17">O</text>
+          <circle cx="210" cy="80" r="24" fill="#ef4444"/>
+          <text x="210" y="86" text-anchor="middle" fill="#fff" font-weight="bold" font-size="17">O</text>
+        </svg>`;
+      desc.textContent = "פחמן דו-חמצני (CO2) — תרכובת הבנויה מאטום פחמן אחד ושני אטומי חמצן.";
+    } else if (type === 'CH4') {
+      stage.innerHTML = `
+        <svg width="260" height="160" viewBox="0 0 260 160">
+          <line x1="130" y1="80" x2="130" y2="25" stroke="#64748b" stroke-width="5"/>
+          <line x1="130" y1="80" x2="130" y2="135" stroke="#64748b" stroke-width="5"/>
+          <line x1="130" y1="80" x2="70" y2="80" stroke="#64748b" stroke-width="5"/>
+          <line x1="130" y1="80" x2="190" y2="80" stroke="#64748b" stroke-width="5"/>
+          <circle cx="130" cy="80" r="25" fill="#334155"/>
+          <text x="130" y="86" text-anchor="middle" fill="#fff" font-weight="bold" font-size="17">C</text>
+          <circle cx="130" cy="25" r="15" fill="#3b82f6"/>
+          <text x="130" y="30" text-anchor="middle" fill="#fff" font-weight="bold" font-size="13">H</text>
+          <circle cx="130" cy="135" r="15" fill="#3b82f6"/>
+          <text x="130" y="140" text-anchor="middle" fill="#fff" font-weight="bold" font-size="13">H</text>
+          <circle cx="70" cy="80" r="15" fill="#3b82f6"/>
+          <text x="70" y="85" text-anchor="middle" fill="#fff" font-weight="bold" font-size="13">H</text>
+          <circle cx="190" cy="80" r="15" fill="#3b82f6"/>
+          <text x="190" y="85" text-anchor="middle" fill="#fff" font-weight="bold" font-size="13">H</text>
+        </svg>`;
+      desc.textContent = "מתאן (CH4) — תרכובת של פחמן ומימן (מרכיב עיקרי בגז טבעי).";
+    } else if (type === 'O2') {
+      stage.innerHTML = `
+        <svg width="260" height="160" viewBox="0 0 260 160">
+          <line x1="95" y1="74" x2="165" y2="74" stroke="#64748b" stroke-width="5"/>
+          <line x1="95" y1="86" x2="165" y2="86" stroke="#64748b" stroke-width="5"/>
+          <circle cx="95" cy="80" r="26" fill="#ef4444"/>
+          <text x="95" y="86" text-anchor="middle" fill="#fff" font-weight="bold" font-size="18">O</text>
+          <circle cx="165" cy="80" r="26" fill="#ef4444"/>
+          <text x="165" y="86" text-anchor="middle" fill="#fff" font-weight="bold" font-size="18">O</text>
+        </svg>`;
+      desc.textContent = "מולקולת חמצן (O2) — יסוד דו-אטומי הבנוי משני אטומי חמצן זהים.";
+    }
+  }
+
+  /* הרכבת תרכובת */
+  let builtAtoms = {};
+  function addAtom(sym) {
+    builtAtoms[sym] = (builtAtoms[sym] || 0) + 1;
+    renderBuilt();
+  }
+
+  function clearBuilt() {
+    builtAtoms = {};
+    renderBuilt();
+    document.getElementById('builtFeedback').textContent = '';
+  }
+
+  function renderBuilt() {
+    const entries = Object.entries(builtAtoms);
+    const el = document.getElementById('builtList');
+    if (entries.length === 0) {
+      el.textContent = "הסל ריק";
+      return;
+    }
+    el.innerHTML = '<span class="ltr">' + entries.map(([k, v]) => k + (v > 1 ? v : '')).join(' + ') + '</span>';
+  }
+
+  function checkBuilt() {
+    const H = builtAtoms.H || 0;
+    const O = builtAtoms.O || 0;
+    const C = builtAtoms.C || 0;
+    const Na = builtAtoms.Na || 0;
+    const Cl = builtAtoms.Cl || 0;
+    const total = H + O + C + Na + Cl;
+    const fb = document.getElementById('builtFeedback');
+
+    if (total === 0) {
+      fb.textContent = "בחרי קודם אטומים להרכבה.";
+    } else if (H === 2 && O === 1 && total === 3) {
+      fb.textContent = "כל הכבוד! הרכבת מולקולת מים (H2O) — תרכובת.";
+    } else if (C === 1 && O === 2 && total === 3) {
+      fb.textContent = "מצוין! הרכבת פחמן דו-חמצני (CO2) — תרכובת.";
+    } else if (C === 1 && H === 4 && total === 5) {
+      fb.textContent = "נהדר! הרכבת מולקולת מתאן (CH4) — תרכובת.";
+    } else if (Na === 1 && Cl === 1 && total === 2) {
+      fb.textContent = "מעולה! הרכבת מלח בישול (NaCl) — תרכובת יונית.";
+    } else if (H === 1 && Cl === 1 && total === 2) {
+      fb.textContent = "יפה מאוד! הרכבת מימן כלורי (HCl) — תרכובת.";
+    } else if (O === 2 && total === 2) {
+      fb.textContent = "הרכבת מולקולת חמצן (O2) — זהו יסוד דו-אטומי.";
+    } else if (H === 2 && total === 2) {
+      fb.textContent = "הרכבת מולקולת מימן (H2) — זהו יסוד דו-אטומי.";
+    } else if (Cl === 2 && total === 2) {
+      fb.textContent = "הרכבת מולקולת כלור (Cl2) — זהו יסוד דו-אטומי.";
+    } else {
+      fb.textContent = "צירוף האטומים הזה אינו יוצר אחת מהמולקולות הבסיסיות ברשימה. נסי שוב (למשל H2O, CO2, NaCl, CH4).";
+    }
+  }
+
+  /* ניהול מאגר שאלות מתגלגל ללא חזרות */
+  function getSeenIds() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveSeenIds(ids) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+    } catch (e) {}
+  }
+
+  function updatePoolUI() {
+    const seen = getSeenIds();
+    const count = Math.min(seen.length, QUESTION_BANK.length);
+    document.getElementById('poolProgressText').textContent = `${count} מתוך ${QUESTION_BANK.length} שאלות`;
+    const pct = Math.round((count / QUESTION_BANK.length) * 100);
+    document.getElementById('poolProgressBar').style.width = pct + '%';
+  }
+
+  function shuffle(arr) {
+    const copy = arr.slice();
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function startNewExam() {
+    examGraded = false;
+    document.getElementById('scoreBanner').style.display = 'none';
+    document.getElementById('submitExamBtn').style.display = 'inline-block';
+    document.getElementById('nextExamBtn').style.display = 'none';
+
+    let seenIds = getSeenIds();
+    let unseen = QUESTION_BANK.filter(q => !seenIds.includes(q.id));
+
+    if (unseen.length === 0) {
+      seenIds = [];
+      saveSeenIds([]);
+      unseen = QUESTION_BANK.slice();
     }
 
-    const moleculesData = [
-      {
-        formula: '3H₂O',
-        type: 'תרכובת (מולקולות)',
-        verbal: 'שלוש מולקולות שכל אחת מורכבת משני אטומי מימן ואטום חמצן אחד.',
-        counts: 'H = 3 × 2 = 6 אטומי מימן | O = 3 × 1 = 3 אטומי חמצן',
-        balls: [
-          { label: 'H', color: '#38bdf8' },
-          { label: 'O', color: '#f87171' },
-          { label: 'H', color: '#38bdf8' }
-        ],
-        repeat: 3
-      },
-      {
-        formula: '4NaCl(s)',
-        type: 'תרכובת',
-        verbal: 'ארבע יחידות של מלח בישול שכל אחת מורכבת מאטום נתרן ואטום כלור במצב מוצק.',
-        counts: 'Na = 4 × 1 = 4 אטומי נתרן | Cl = 4 × 1 = 4 אטומי כלור',
-        balls: [
-          { label: 'Na', color: '#facc15' },
-          { label: 'Cl', color: '#4ade80' }
-        ],
-        repeat: 4
-      },
-      {
-        formula: '2CaH₆(l)',
-        type: 'תרכובת',
-        verbal: 'שתי מולקולות שכל אחת מורכבת מאטום סידן אחד ושישה אטומי מימן במצב נוזל.',
-        counts: 'Ca = 2 × 1 = 2 אטומי סידן | H = 2 × 6 = 12 אטומי מימן',
-        balls: [
-          { label: 'Ca', color: '#c084fc' },
-          { label: 'H', color: '#38bdf8' }
-        ],
-        repeat: 2
-      },
-      {
-        formula: '3NH₃(g)',
-        type: 'תרכובת',
-        verbal: 'שלוש מולקולות שכל אחת מורכבת מאטום חנקן אחד ושלושה אטומי מימן במצב גז.',
-        counts: 'N = 3 × 1 = 3 אטומי חנקן | H = 3 × 3 = 9 אטומי מימן',
-        balls: [
-          { label: 'N', color: '#60a5fa' },
-          { label: 'H', color: '#38bdf8' }
-        ],
-        repeat: 3
-      },
-      {
-        formula: '4AlBr₃(s)',
-        type: 'תרכובת',
-        verbal: 'ארבע מולקולות שכל אחת מורכבת מאטום אלומיניום אחד ושלושה אטומי ברום במצב מוצק.',
-        counts: 'Al = 4 × 1 = 4 אטומי אלומיניום | Br = 4 × 3 = 12 אטומי ברום',
-        balls: [
-          { label: 'Al', color: '#cbd5e1' },
-          { label: 'Br', color: '#fb923c' }
-        ],
-        repeat: 4
-      },
-      {
-        formula: '8I₂',
-        type: 'יסוד (מולקולות)',
-        verbal: 'שמונה מולקולות שכל אחת מורכבת משני אטומי יוד.',
-        counts: 'I = 8 × 2 = 16 אטומי יוד',
-        balls: [
-          { label: 'I', color: '#a855f7' },
-          { label: 'I', color: '#a855f7' }
-        ],
-        repeat: 4
-      }
-    ];
-
-    function initMolecules() {
-      const btns = document.getElementById('molButtons');
-      moleculesData.forEach((m, idx) => {
-        const b = document.createElement('button');
-        b.className = idx === 0 ? 'action' : 'secondary';
-        b.textContent = m.formula;
-        b.onclick = () => {
-          btns.querySelectorAll('button').forEach(btn => btn.className = 'secondary');
-          b.className = 'action';
-          showMolecule(m);
-        };
-        btns.appendChild(b);
-      });
-      showMolecule(moleculesData[0]);
+    let selected = [];
+    if (unseen.length >= EXAM_SIZE) {
+      selected = shuffle(unseen).slice(0, EXAM_SIZE);
+    } else {
+      const restCount = EXAM_SIZE - unseen.length;
+      const alreadySeen = QUESTION_BANK.filter(q => seenIds.includes(q.id));
+      selected = unseen.concat(shuffle(alreadySeen).slice(0, restCount));
     }
 
-    function showMolecule(m) {
-      let visualHtml = '<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;">';
-      for (let r = 0; r < m.repeat; r++) {
-        visualHtml += '<div style="display:flex;align-items:center;gap:4px;padding:6px 10px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;">';
-        m.balls.forEach(ball => {
-          visualHtml += `<span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:${ball.color};color:#0f172a;font-weight:800;font-size:0.8rem;">${ball.label}</span>`;
-        });
-        visualHtml += '</div>';
-      }
-      visualHtml += '</div>';
+    currentExamQuestions = selected;
+    renderExam();
+    updatePoolUI();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-      document.getElementById('molDisplay').innerHTML = `
-        <div><strong>נוסחה</strong> ${m.formula} | <strong>סיווג</strong> ${m.type}</div>
-        <div style="margin-top:6px;"><strong>תיאור מילולי</strong> ${m.verbal}</div>
-        <div style="margin-top:6px;"><strong>ספירת אטומים</strong> ${m.counts}</div>
-        ${visualHtml}
+  function renderExam() {
+    const container = document.getElementById('quizContainer');
+    container.innerHTML = '';
+
+    currentExamQuestions.forEach((item, idx) => {
+      const qDiv = document.createElement('div');
+      qDiv.className = 'question-card';
+      qDiv.id = `q-card-${idx}`;
+
+      const optionsHtml = item.options.map((opt, optIdx) => `
+        <label class="option-label" id="opt-${idx}-${optIdx}">
+          <input type="radio" name="q_${idx}" value="${optIdx}" />
+          <span>${opt}</span>
+        </label>
+      `).join('');
+
+      qDiv.innerHTML = `
+        <div class="q-title">
+          <span class="q-badge">${item.topic}</span>
+          ${idx + 1}. ${item.q}
+        </div>
+        <div class="options-list">${optionsHtml}</div>
+        <div class="explanation" id="exp-${idx}"><strong>הסבר</strong> ${item.exp}</div>
       `;
+      container.appendChild(qDiv);
+    });
+  }
+
+  function gradeExam() {
+    if (examGraded) return;
+
+    let correctCount = 0;
+    let answeredCount = 0;
+
+    currentExamQuestions.forEach((item, idx) => {
+      const chosen = document.querySelector(`input[name="q_${idx}"]:checked`);
+      if (chosen) answeredCount++;
+    });
+
+    if (answeredCount < currentExamQuestions.length) {
+      const ok = confirm(`ענית על ${answeredCount} מתוך ${currentExamQuestions.length} שאלות. להגיש בכל זאת?`);
+      if (!ok) return;
     }
 
-    // סרטון הרכבת התרכובת
-    const canvas = document.getElementById('reactionCanvas');
-    const ctx = canvas.getContext('2d');
-    let animId = null;
-    let progress = 0;
-    let currentMode = null;
+    examGraded = true;
+    const seenIds = getSeenIds();
 
-    function drawStaticScene() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#94a3b8';
-      ctx.font = '16px system-ui';
-      ctx.textAlign = 'center';
-      ctx.fillText('סימולציית הרכבת תרכובת - לחצי על כפתור למעלה להפעלה', canvas.width / 2, canvas.height / 2);
-    }
-
-    function drawAtom(x, y, r, color, label) {
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fillStyle = color;
-      ctx.fill();
-      ctx.lineWidth = 2;
-      ctx.strokeStyle = '#ffffff';
-      ctx.stroke();
-      ctx.fillStyle = '#0f172a';
-      ctx.font = 'bold 13px system-ui';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(label, x, y);
-    }
-
-    function startReaction(mode) {
-      cancelAnimationFrame(animId);
-      currentMode = mode;
-      progress = 0;
-      const cap = document.getElementById('reactionCaption');
-      cap.innerHTML = mode === 'water'
-        ? '<span class="pill">אטומי מימן וחמצן מתקרבים ויוצרים קשר כימי ליצירת מולקולת מים H₂O</span>'
-        : '<span class="pill">נתרן מתכתי וכלור גזי מתרכבים ליצירת תרכובת מוצקה NaCl</span>';
-      stepAnimation();
-    }
-
-    function resetReaction() {
-      cancelAnimationFrame(animId);
-      currentMode = null;
-      progress = 0;
-      drawStaticScene();
-      document.getElementById('reactionCaption').innerHTML = '<span class="pill">ההדמיה אופסה</span>';
-    }
-
-    function stepAnimation() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      progress = Math.min(1, progress + 0.015);
-      const t = progress;
-
-      if (currentMode === 'water') {
-        const ox = 360, oy = 110;
-        const h1x = 120 + (ox - 36 - 120) * t;
-        const h1y = 75 + (oy + 22 - 75) * t;
-        const h2x = 120 + (ox + 36 - 120) * t;
-        const h2y = 155 + (oy + 22 - 155) * t;
-
-        if (t > 0.65) {
-          ctx.strokeStyle = '#e2e8f0';
-          ctx.lineWidth = 4;
-          ctx.beginPath();
-          ctx.moveTo(ox, oy);
-          ctx.lineTo(h1x, h1y);
-          ctx.moveTo(ox, oy);
-          ctx.lineTo(h2x, h2y);
-          ctx.stroke();
-        }
-
-        drawAtom(ox, oy, 26, '#f87171', 'O');
-        drawAtom(h1x, h1y, 17, '#38bdf8', 'H');
-        drawAtom(h2x, h2y, 17, '#38bdf8', 'H');
-
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '15px system-ui';
-        ctx.textAlign = 'center';
-        ctx.fillText(t < 1 ? 'מגיבים בדרך לקשר כימי...' : 'נוצרה מולקולת מים H₂O (תרכובת)', 360, 198);
-      } else if (currentMode === 'salt') {
-        const startNaX = 140, endNaX = 335;
-        const startClX = 560, endClX = 385;
-        const naX = startNaX + (endNaX - startNaX) * t;
-        const clX = startClX + (endClX - startClX) * t;
-
-        if (t > 0.65) {
-          ctx.strokeStyle = '#fde047';
-          ctx.lineWidth = 4;
-          ctx.beginPath();
-          ctx.moveTo(naX, 110);
-          ctx.lineTo(clX, 110);
-          ctx.stroke();
-        }
-
-        drawAtom(naX, 110, 24, '#facc15', 'Na');
-        drawAtom(clX, 110, 24, '#4ade80', 'Cl');
-
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '15px system-ui';
-        ctx.textAlign = 'center';
-        ctx.fillText(t < 1 ? 'התרכבות כימית בין נתרן לכלור...' : 'נוצרה תרכובת נתרן כלורי NaCl (מלח בישול)', 360, 198);
+    currentExamQuestions.forEach((item, idx) => {
+      if (!seenIds.includes(item.id)) {
+        seenIds.push(item.id);
       }
 
-      if (progress < 1) {
-        animId = requestAnimationFrame(stepAnimation);
+      const chosen = document.querySelector(`input[name="q_${idx}"]:checked`);
+      const chosenVal = chosen ? parseInt(chosen.value, 10) : -1;
+
+      const correctLabel = document.getElementById(`opt-${idx}-${item.answer}`);
+      if (correctLabel) correctLabel.classList.add('correct');
+
+      if (chosenVal === item.answer) {
+        correctCount++;
+      } else if (chosenVal !== -1) {
+        const wrongLabel = document.getElementById(`opt-${idx}-${chosenVal}`);
+        if (wrongLabel) wrongLabel.classList.add('wrong');
       }
+
+      document.querySelectorAll(`input[name="q_${idx}"]`).forEach(inp => inp.disabled = true);
+      document.getElementById(`exp-${idx}`).style.display = 'block';
+    });
+
+    saveSeenIds(seenIds);
+    updatePoolUI();
+
+    const score = Math.round((correctCount / currentExamQuestions.length) * 100);
+    const remaining = QUESTION_BANK.length - seenIds.length;
+
+    const banner = document.getElementById('scoreBanner');
+    document.getElementById('scoreText').textContent = `הציון שלך ${score} (${correctCount} מתוך ${currentExamQuestions.length})`;
+    document.getElementById('scoreSubtext').textContent = remaining > 0
+      ? `נותרו עוד ${remaining} שאלות חדשות במאגר שטרם הופיעו. לחצי למטה כדי להתחיל מבחן חדש.`
+      : `סיימת לעבור על כל ${QUESTION_BANK.length} השאלות במאגר! לחצי למטה כדי להתחיל סבב רענון חדש.`;
+
+    banner.style.display = 'block';
+    document.getElementById('submitExamBtn').style.display = 'none';
+    document.getElementById('nextExamBtn').style.display = 'inline-block';
+  }
+
+  function resetPoolProgress() {
+    if (confirm("לאפס את היסטוריית השאלות שנפתרו ולהתחיל את כל המאגר מחדש?")) {
+      saveSeenIds([]);
+      startNewExam();
     }
+  }
 
-    // מאגר שאלות בחינה ואתגר מבוסס מחברת בלבד
-    const examBank = [
-      {
-        q: 'מה ההבדל המרכזי בין תרכובת לתערובת לפי המחברת',
-        opts: [
-          'בתרכובת נוצר קשר כימי בין היסודות ומתקבל חומר חדש, ובתערובת החומרים מעורבים ללא קשר כימי',
-          'תערובת היא תמיד חומר טהור ותרכובת היא תמיד גז',
-          'בתרכובת כל האטומים זהים לחלוטין'
-        ],
-        ans: 0,
-        exp: 'בתרכובת נוצר קשר כימי ומתקבלות תכונות חדשות; בתערובת הרכיבים אינם קשורים בקשר כימי ושומרים על תכונותיהם.'
-      },
-      {
-        q: 'איזה מן הבאים הוא יסוד מולקולרי המופיע ברשימת 9 היסודות המולקולריים במחברת',
-        opts: ['H₂O', 'Cl₂', 'NaCl'],
-        ans: 1,
-        exp: 'כלור Cl₂ הוא יסוד מולקולרי (שני אטומי כלור קשורים). H₂O ו-NaCl הן תרכובות.'
-      },
-      {
-        q: 'כיצד נכתב סימול כימי תקין של יסוד המורכב משתי אותיות',
-        opts: [
-          'אות קטנה ואחריה אות גדולה, למשל cA',
-          'אות גדולה ואחריה אות קטנה, למשל Ca',
-          'שתי אותיות גדולות, למשל CA'
-        ],
-        ans: 1,
-        exp: 'סימול כימי מתחיל באות לטינית גדולה ובמידת הצורך ממשיך באות קטנה, כמו Ca לסידן או Na לנתרן.'
-      },
-      {
-        q: 'איזו קבוצה מציגה תכונות אופייניות למתכות',
-        opts: [
-          'מוליכות חשמל וחום, ברק מתכתי וניתנות לריקוע',
-          'אינן מוליכות חשמל כלל ואינן מבריקות',
-          'תמיד גזיות בטמפרטורת החדר'
-        ],
-        ans: 0,
-        exp: 'מתכות מוליכות חשמל וחום, בעלות ברק מתכתי וניתנות לריקוע ולמשיכה.'
-      },
-      {
-        q: 'איזה מן היסודות הבאים שייך למשפחת הגזים האצילים',
-        opts: ['ארגון Ar', 'נתרן Na', 'ברום Br'],
-        ans: 0,
-        exp: 'ארגון Ar הוא גז אציל (יציב ואטומי), נתרן שייך למתכות האלקליות וברום להלוגנים.'
-      },
-      {
-        q: 'מהו התיאור המילולי של 2P₄ לפי סיכומי המחברת',
-        opts: [
-          'שתי מולקולות של זרחן שכל אחת מורכבת מ-4 אטומים',
-          'ארבע מולקולות של זרחן שכל אחת מורכבת מ-2 אטומים',
-          'מולקולה אחת של זרחן ובה 6 אטומים'
-        ],
-        ans: 0,
-        exp: 'המספר 2 משמאל מציין שתי מולקולות, והמספר 4 למטה מציין 4 אטומי זרחן בכל מולקולה.'
-      },
-      {
-        q: 'האם אוויר נחשב לתרכובת או לתערובת',
-        opts: [
-          'תערובת של גזים כגון חנקן וחמצן',
-          'תרכובת אחת של חנקן וחמצן',
-          'יסוד טהור'
-        ],
-        ans: 0,
-        exp: 'אוויר הוא תערובת של גזים (כמו N₂, O₂, CO₂, He, Ar) שאינם קשורים ביניהם בקשר כימי.'
-      }
-    ];
+  /* רינדור שאלות אתגר */
+  function renderChallenges() {
+    const container = document.getElementById('challengeContainer');
+    container.innerHTML = '';
+    CHALLENGE_QUESTIONS.forEach((item, idx) => {
+      const div = document.createElement('div');
+      div.className = 'question-card';
+      const opts = item.options.map((opt, optIdx) => `
+        <label class="option-label" id="ch-opt-${idx}-${optIdx}">
+          <input type="radio" name="ch_${idx}" value="${optIdx}" />
+          <span>${opt}</span>
+        </label>
+      `).join('');
 
-    const challengeBank = [
-      {
-        q: 'בנוסחה 4AlBr₃(s) - כמה אטומי ברום (Br) וכמה אטומי אלומיניום (Al) יש בסך הכול',
-        opts: [
-          '4 אטומי Al ו-12 אטומי Br',
-          '1 אטום Al ו-3 אטומי Br',
-          '4 אטומי Al ו-3 אטומי Br'
-        ],
-        ans: 0,
-        exp: 'יש 4 מולקולות ובכל אחת אטום Al אחד ו-3 אטומי Br, לכן Al = 4 × 1 = 4 ו-Br = 4 × 3 = 12.'
-      },
-      {
-        q: 'מדוע למלח בישול (NaCl) תכונות שונות מנתרן (Na) ומכלור (Cl)',
-        opts: [
-          'כי נוצרה תרכובת חדשה בעלת תכונות חדשות השונות מהיסודות המרכיבים אותה',
-          'כי נתרן וכלור נעלמים לחלוטין בתוך המים',
-          'כי NaCl היא תערובת שבה כל יסוד שומר על תכונותיו המקוריות'
-        ],
-        ans: 0,
-        exp: 'כאשר יסודות יוצרים תרכובת, מתקבל חומר חדש בעל תכונות חדשות השונות מאלה של היסודות המרכיבים אותו.'
-      },
-      {
-        q: 'אם תלמיד כותב את הסימולים cl, co, nA - איזו שגיאה משותפת מופיעה כאן',
-        opts: [
-          'שימוש שגוי באותיות גדולות וקטנות בסימול הכימי של יסודות',
-          'הוספת מצב צבירה בסוגריים ליד כל יסוד',
-          'שימוש במספרים קטנים במקום אותיות'
-        ],
-        ans: 0,
-        exp: 'הסימולים הנכונים הם Cl (כלור), Co (קובלט, להבדיל מ-CO שהוא פחמן חד-חמצני) ו-Na (נתרן).'
-      },
-      {
-        q: 'מה ההבדל בין מולקולה של יסוד (למשל S₈) לבין מולקולה של תרכובת (למשל H₂O)',
-        opts: [
-          'ב-S₈ כל האטומים מאותו סוג (גופרית), וב-H₂O יש אטומים מסוגים שונים (מימן וחמצן)',
-          'ב-S₈ יש קשר כימי וב-H₂O אין קשר כימי',
-          'ב-H₂O יש רק אטום אחד וב-S₈ יש שמונה מולקולות'
-        ],
-        ans: 0,
-        exp: 'יסוד מורכב מסוג אחד של אטומים, ותרכובת מורכבת משני סוגי אטומים או יותר הקשורים ביניהם.'
-      },
-      {
-        q: 'כמה אטומי חמצן (O) וכמה אטומי מימן (H) יש ב-3H₂O',
-        opts: [
-          '6 אטומי מימן ו-3 אטומי חמצן',
-          '2 אטומי מימן ו-1 אטום חמצן',
-          '3 אטומי מימן ו-6 אטומי חמצן'
-        ],
-        ans: 0,
-        exp: 'בכל מולקולת H₂O יש 2 אטומי H ואטום O אחד; ב-3 מולקולות יש H = 3 × 2 = 6 ו-O = 3 × 1 = 3.'
-      }
-    ];
-
-    const activeSets = { exam: [], challenge: [] };
-
-    function pickRandom(arr, count) {
-      const copy = [...arr];
-      for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
-      }
-      return copy.slice(0, Math.min(count, copy.length));
-    }
-
-    function renderQuestions(mode) {
-      const bank = mode === 'exam' ? examBank : challengeBank;
-      const chosen = pickRandom(bank, 4);
-      activeSets[mode] = chosen;
-      const container = document.getElementById(mode + 'Questions');
-      document.getElementById(mode + 'Score').innerHTML = '';
-      container.innerHTML = '';
-
-      chosen.forEach((item, idx) => {
-        const div = document.createElement('div');
-        div.className = 'q-item';
-        let optsHtml = '';
-        item.opts.forEach((opt, oIdx) => {
-          optsHtml += `
-            <label class="opt-label">
-              <input type="radio" name="${mode}_q${idx}" value="${oIdx}" />
-              ${opt}
-            </label>
-          `;
-        });
-        div.innerHTML = `
-          <div class="q-title">שאלה ${idx + 1}. ${item.q}</div>
-          ${optsHtml}
-          <div id="${mode}_fb${idx}"></div>
-        `;
-        container.appendChild(div);
-      });
-    }
-
-    function gradeQuestions(mode) {
-      const list = activeSets[mode];
-      let correctCount = 0;
-
-      list.forEach((item, idx) => {
-        const selected = document.querySelector(`input[name="${mode}_q${idx}"]:checked`);
-        const fb = document.getElementById(`${mode}_fb${idx}`);
-        if (!selected) {
-          fb.className = 'feedback bad';
-          fb.textContent = 'לא נבחרה תשובה. תשובה נכונה - ' + item.opts[item.ans] + '. ' + item.exp;
-          return;
-        }
-        const val = Number(selected.value);
-        if (val === item.ans) {
-          correctCount++;
-          fb.className = 'feedback ok';
-          fb.textContent = 'תשובה נכונה. ' + item.exp;
-        } else {
-          fb.className = 'feedback bad';
-          fb.textContent = 'תשובה שגויה. תשובה נכונה - ' + item.opts[item.ans] + '. ' + item.exp;
-        }
-      });
-
-      const score = Math.round((correctCount / list.length) * 100);
-      document.getElementById(mode + 'Score').innerHTML = `
-        <div class="score-banner">ציון סיום - ${score} (${correctCount} מתוך ${list.length} תשובות נכונות)</div>
+      div.innerHTML = `
+        <div class="q-title">אתגר ${idx + 1}. ${item.q}</div>
+        <div class="options-list">${opts}</div>
+        <button class="btn btn-primary" style="margin-top:10px;" onclick="checkChallenge(${idx})">בדוק תשובה</button>
+        <div class="explanation" id="ch-exp-${idx}"><strong>הסבר</strong> ${item.exp}</div>
       `;
-    }
+      container.appendChild(div);
+    });
+  }
 
-    initMolecules();
-    drawStaticScene();
-    renderQuestions('exam');
-    renderQuestions('challenge');
-  </script>
+  function checkChallenge(idx) {
+    const item = CHALLENGE_QUESTIONS[idx];
+    const chosen = document.querySelector(`input[name="ch_${idx}"]:checked`);
+    if (!chosen) {
+      alert("בחרי תשובה קודם.");
+      return;
+    }
+    const val = parseInt(chosen.value, 10);
+    document.getElementById(`ch-opt-${idx}-${item.answer}`).classList.add('correct');
+    if (val !== item.answer) {
+      document.getElementById(`ch-opt-${idx}-${val}`).classList.add('wrong');
+    }
+    document.getElementById(`ch-exp-${idx}`).style.display = 'block';
+  }
+
+  /* אתחול ראשוני */
+  showMolecule('H2O');
+  startNewExam();
+  renderChallenges();
+</script>
+
 </body>
 </html>
